@@ -4,12 +4,15 @@
   var data; try{ data=JSON.parse(dataEl.textContent); }catch(e){ return; }
   var NS='http://www.w3.org/2000/svg', W=1120, H=720, CX=W/2, CY=H/2;
   var nodes=data.nodes.map(function(n){return Object.assign({hidden:false,fx:null,fy:null},n);});
+  var TH=data.themeColors||[];
   var byId={}; nodes.forEach(function(n){byId[n.id]=n;});
   var edges=data.edges.filter(function(e){return byId[e.s]&&byId[e.t];});
 
   var svg=document.createElementNS(NS,'svg');
   svg.setAttribute('viewBox','0 0 '+W+' '+H);
   svg.setAttribute('class','kg-svg');
+  svg.setAttribute('role','img');
+  svg.setAttribute('aria-label','知识星图：'+nodes.length+' 个实体按共现关系连成的关联图谱');
   svg.setAttribute('preserveAspectRatio','xMidYMid meet');
   host.appendChild(svg);
   var gEdges=document.createElementNS(NS,'g'), gNodes=document.createElementNS(NS,'g');
@@ -37,6 +40,7 @@
     g.setAttributeNS('http://www.w3.org/1999/xlink','href',n.url); g.setAttribute('href',n.url);
     g.setAttribute('class','kg-node kg-t-'+n.type+(n.big?' lab':''));
     var c=document.createElementNS(NS,'circle'); c.setAttribute('r',n.r); c.setAttribute('fill',n.color);
+    n.tcolor=TH[n.th||0]||n.color;
     var t=document.createElementNS(NS,'text'); t.setAttribute('class','kg-label');
     t.setAttribute('text-anchor','middle'); t.setAttribute('font-size',n.r>=18?13:(n.r>=13?12:11));
     t.textContent=n.name;
@@ -88,9 +92,12 @@
     host.appendChild(panel); pBody=panel.querySelector('.kg-pbody');
     panel.querySelector('.kg-px').addEventListener('click',closePanel);
     pBody.addEventListener('click',function(ev){
-      var b=ev.target.closest('[data-go]'); if(b){ ev.preventDefault(); openPanel(b.getAttribute('data-go')); }
+      var b=ev.target.closest('[data-go]'); if(b){ ev.preventDefault(); openPanel(b.getAttribute('data-go')); return; }
+      var iso=ev.target.closest('.kg-piso'); if(iso){ ev.preventDefault(); svg.classList.toggle('kg-iso'); syncIso(); }
     });
   }
+  function syncIso(){ var on=svg.classList.contains('kg-iso'), b=panel&&panel.querySelector('.kg-piso');
+    if(b){ b.classList.toggle('on',on); b.textContent= on?'◉ 显示全部':'◌ 只看相关'; } }
   function openPanel(id){
     var n=byId[id]; if(!n||n.hidden) return;
     if(!panel) buildPanel();
@@ -100,9 +107,11 @@
       return '<a class="kg-psess" href="talks/'+s[0]+'.html"><span class="kg-pt">'+esc2(s[2])+'</span>'+esc2(s[1])+'</a>';}).join('');
     var rel=(n.rel||[]).map(function(r){var o=byId[r[0]];
       return o?'<button class="kg-prchip kg-t-'+o.type+'" type="button" data-go="'+esc2(o.id)+'"><i></i>'+esc2(o.name)+'<b>'+r[1]+'</b></button>':'';}).join('');
+    var isoOn=svg.classList.contains('kg-iso');
     pBody.innerHTML=
       '<div class="kg-phead"><div class="kg-ptype"><span class="kg-pdot" style="background:'+n.color+'"></span>'+esc2(TLBL[n.type]||'')+' · 出现于 '+n.f+' 场</div>'+
-      '<h3>'+esc2(n.name)+'</h3></div>'+
+      '<h3>'+esc2(n.name)+'</h3>'+
+      '<button class="kg-piso'+(isoOn?' on':'')+'" type="button">'+(isoOn?'◉ 显示全部':'◌ 只看相关')+'</button></div>'+
       (n.desc?'<p class="kg-pdesc">'+esc2(n.desc)+'</p>':'')+
       ((n.sessions&&n.sessions.length)?'<div class="kg-psec">出现于 · '+n.sessions.length+' 场</div><div class="kg-psesslist">'+sess+'</div>':'')+
       (rel?'<div class="kg-psec">关联实体</div><div class="kg-prel">'+rel+'</div>':'')+
@@ -111,7 +120,7 @@
   }
   function closePanel(){
     if(!panel||!panel.classList.contains('on')) return;
-    panel.classList.remove('on'); svg.classList.remove('kg-haspanel');
+    panel.classList.remove('on'); svg.classList.remove('kg-haspanel'); svg.classList.remove('kg-iso');
     if(selId && byId[selId]){ byId[selId].fx=null; byId[selId].fy=null; }
     selId=null; focus(null); reheat(0.2);
   }
@@ -172,8 +181,10 @@
   function step(){ tick(alpha); alpha*=0.986; render();
     if(alpha>0.02 || drag.node){ requestAnimationFrame(step); } else { running=false; } }
   function reheat(a){ alpha=Math.max(alpha, a||0.3); if(!running){ running=true; requestAnimationFrame(step); } }
-  for(var w=0;w<170;w++) tick(1); render();
-  if(window.requestAnimationFrame){ running=true; requestAnimationFrame(step); } else { for(var k=0;k<260;k++) tick(0.5); render(); }
+  var REDUCED=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  for(var w=0;w<(REDUCED?320:170);w++) tick(1); render();
+  if(!REDUCED && window.requestAnimationFrame){ running=true; requestAnimationFrame(step); }
+  else if(!window.requestAnimationFrame){ for(var k=0;k<260;k++) tick(0.5); render(); }
 
   // wire up controls --------------------------------------------------------
   var box=document.getElementById('kg-search'), clr=document.getElementById('kg-clear');
@@ -185,6 +196,12 @@
       off[tp]=!off[tp]; btn.classList.toggle('off',off[tp]); applyVis();
       if(searchOn) runSearch(box?box.value:''); });
   });
+  var cmodeBtn=document.getElementById('kg-cmode'), themeLeg=document.getElementById('kg-themeleg'), themeMode=false;
+  if(cmodeBtn){ cmodeBtn.addEventListener('click',function(){ themeMode=!themeMode;
+    nodes.forEach(function(n){ n.c.setAttribute('fill', themeMode? n.tcolor : n.color); });
+    cmodeBtn.setAttribute('aria-pressed', themeMode?'true':'false'); cmodeBtn.classList.toggle('on',themeMode);
+    cmodeBtn.textContent= themeMode? '⬡ 按类型着色' : '⬡ 按主题着色';
+    if(themeLeg) themeLeg.hidden=!themeMode; }); }
   svg.addEventListener('click',function(ev){ if(ev.target===svg||ev.target===gEdges) closePanel(); });
   svg.addEventListener('dblclick',function(ev){
     if(ev.target===svg||ev.target===gEdges){ closePanel(); nodes.forEach(function(n){ n.fx=null; n.fy=null; }); reheat(0.6); }

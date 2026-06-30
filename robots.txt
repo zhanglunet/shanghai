@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://agentic-ai-shanghai-2026.pages.dev/sitemap.xml

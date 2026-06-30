@@ -9,6 +9,8 @@
 &nbsp;
 [![Latest release](https://img.shields.io/github/v/release/zhanglunet/shanghai?style=for-the-badge&color=0ea5a4&label=release)](https://github.com/zhanglunet/shanghai/releases/latest)
 
+[更新日志 Changelog](CHANGELOG.md)
+
 <img src="docs/home.png" alt="网站首页" width="900">
 
 </div>

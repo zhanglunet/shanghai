@@ -179,6 +179,7 @@ body.lb-open{overflow:hidden}
 .kg-svg.kg-on .kg-node.lo circle{fill-opacity:.16}
 .kg-svg.kg-on .kg-node.hi .kg-label{fill:#fff}
 .kg-svg.kg-on .kg-node.hi circle{stroke:#fff;stroke-width:3.5}
+.kg-svg.kg-iso .kg-node.lo,.kg-svg.kg-iso .kg-edge.lo{display:none}
 .kg-svg.kg-searching .kg-node.nomatch circle{fill-opacity:.13}
 .kg-svg.kg-searching .kg-node.match circle{stroke:#fff;stroke-width:3.5}
 .kg-svg.kg-searching .kg-node.match .kg-label{fill:#fff}
@@ -209,6 +210,13 @@ body.lb-open{overflow:hidden}
 .kg-prchip b{color:#8aa0d8;font-weight:700}
 .kg-pmore{display:inline-block;margin-top:18px;color:#9db4ff;font-weight:700;font-size:14px}
 .kg-pmore:hover{color:#fff}
+.kg-piso{margin-top:10px;border:1px solid #2a3a6b;background:rgba(255,255,255,.05);color:#bcd0ff;border-radius:999px;padding:4px 12px;font:inherit;font-size:12.5px;cursor:pointer;transition:.14s}
+.kg-piso:hover{border-color:#5a78d8;background:rgba(90,120,216,.2);color:#fff}
+.kg-piso.on{background:#3b5bdb;border-color:#3b5bdb;color:#fff}
+.kg-cmode{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:5px 12px;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer;transition:.14s}
+.kg-cmode:hover{border-color:#c7d6ff;color:var(--brand)}
+.kg-cmode.on{background:var(--brandbg);border-color:#d6e0ff;color:var(--brand)}
+.kg-themeleg{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
 /* 全站搜索 overlay */
 .navsearch{margin-left:2px;border:1px solid var(--line);background:var(--card);border-radius:8px;width:34px;height:32px;cursor:pointer;font-size:14px;color:var(--muted);display:inline-flex;align-items:center;justify-content:center;transition:.14s}
 .navsearch:hover{border-color:#c7d6ff;color:var(--brand)}
