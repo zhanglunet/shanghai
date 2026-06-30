@@ -1,0 +1,89 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 时代的编程语言演进（Rust / 仓颉 / TypeScript） · AIVF &#x27;26</title><link rel="stylesheet" href="../style.css"></head>
+<body><header class="nav"><div class="wrap">
+    <a class="brand" href="../index.html">AIVF &#x27;26 · <b>智能体产业研讨会</b></a>
+    <nav><a href="../index.html#agenda">日程</a><a href="../index.html#speakers">嘉宾</a><a href="../wiki/index.html">Wiki</a></nav>
+    </div></header><div class="wrap"><div class="crumb"><a href="../index.html">日程</a> › Agentic AI 软件工程方法论与形式化验证 › 纪要</div><div class="dhead"><h1>AI 时代的编程语言演进（Rust / 仓颉 / TypeScript）</h1><div class="who"><a href="../speakers.html#s13" class="nm">冯新宇</a><br><span style="font-size:13px">南京大学计算机科学与技术系教授、博导，编程语言领域知名科学家</span></div><div class="dmeta"><span class="chip">主题二 Agentic AI 软件工程方法论与形式化验证</span><span class="chip">⏱ 11:40–11:55</span><span class="chip">🎙 19 分钟现场录制</span></div></div><div class="card"><h3>智能纪要 </h3><div class="summary"><p>音频围绕 AI 时代编程语言的机会展开，深入探讨了软件开发三要素的变化、编程语言的需求、面临的问题及解决方案，还提及符号神经融合的开发范式，为编程语言的发展提供了新的思路和方向，内容如下：</p>
+<ul>
+<li><strong>AI 时代软件开发三要素变化</strong></li>
+<ul>
+<ul>
+<li><strong>用户需求转变</strong>：软件的使用对象从人扩展到 agent，用户需求的实现和使用感受有了新的变化。</li>
+<li><strong>开发者构成变化</strong>：软件开发人员从人扩展到 agent，开发模式也将发生改变。</li>
+<li><strong>执行模型革新</strong>：大模型提供了运行时能力，类似在 CPU 之外的另一个处理器，与确定性处理器不同，带来符号神经融合等新的计算范式。</li>
+</ul>
+</ul>
+<li><strong>编程语言的需求与发展</strong></li>
+<ul>
+<ul>
+<li><strong>多种语言需求</strong></li>
+<ul>
+<ul>
+<li>Spec 语言需求：从开发过程角度，SBD 关注点前移，需要 Spec 语言进行需求描述，它将在软件开发中涌现并形成谱系。</li>
+<li>传统编程语言保留：传统编程语言作为代码载体，需求仍然存在，虽会演进，但不会消失。</li>
+<li>新语言支持智能软件：符号神经融合带来新的计算范式，需要新语言支撑智能软件或 agent 的开发。</li>
+</ul>
+</ul>
+<li><strong>语言发展趋势</strong></li>
+<ul>
+<ul>
+<li>开发者体验弱化：若关注点前移，高级语言可能退化为中间语言，开发者体验属性不再重要，性能和安全尤其是安全方面的重要性提升。</li>
+<li>Rust 优势与创新空间：Rust 在性能和安全方面有优势，吃到了 AI 带来的红利，但并非终点，在安全和性能方面还有很大创新空间。</li>
+<li>语言多样性持续：语言运行态关注多方面能力，如动态性、兼容性、动态加载能力等，DSL 面向领域的创新也将持续存在。</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<li><strong>AI 编程面临的问题及解决方案</strong></li>
+<ul>
+<ul>
+<li><strong>根本问题</strong></li>
+<ul>
+<ul>
+<li>需求表达二义性：需求表达存在二义性，这是自然语言的根本性问题，大模型虽有助于消解，但问题仍然存在。</li>
+<li>大模型不确定性：大模型执行存在不确定性，软件工程历史上一直在解决人与大模型类似的不确定性问题。</li>
+</ul>
+</ul>
+<li><strong>解决方案</strong></li>
+<ul>
+<ul>
+<li>形式化语言的作用：形式化语言能剔除二义性，是开发者的朋友，可解决需求表达二义性问题。</li>
+<li>Spec 语言的应用：Spec 语言可指导代码生成和测试，也可用于代码理解、重构和增量式开发，还能实现跨语言、跨平台翻译，成为移动端跨平台开发的新范式。</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<li><strong>学术界与工业界的融合</strong></li>
+<ul>
+<ul>
+<li><strong>隔阂现状</strong>：学术界做编程语言的人多关注数学代数性质、安全保证等，与工业界关注点差异大，存在较大隔阂。</li>
+<li><strong>融合趋势</strong>：随着开发者友好性因素降低，若学术界的想法能提升软件安全性，有可能将其迁移到编程语言中。</li>
+</ul>
+</ul>
+<li><strong>新语言的发展情况</strong></li>
+<ul>
+<ul>
+<li><strong>语料问题缓解</strong>：新语言开发面临语料少的问题，但随着大模型能力提升和知识技能加入，情况有所改善。</li>
+<li><strong>仓颉语言演变</strong>：仓颉语言在语言特性上有早期测试、context 或类型增强等演变，未来将更多解决安全性问题，让编译器帮助查错。</li>
+</ul>
+</ul>
+<li><strong>符号神经融合的开发范式</strong></li>
+<ul>
+<ul>
+<li><strong>开发需求</strong>：符号神经融合需要一层软件来发挥大模型能力，解决不确定性和协同问题。</li>
+<li><strong>协同范式</strong></li>
+<ul>
+<ul>
+<li>workflow 形式：程序中需要大模型时，让大模型帮忙做事。</li>
+<li>agentic 形式：直接用自然语言开发，中间调用工具，但存在组合性、兼容性、信用 token 消耗、安全性等问题。</li>
+</ul>
+</ul>
+<li><strong>语言发展</strong>：目前已出现一些面向不同领域的语言，希望实现传统与大模型更细粒度的交互。</li>
+</ul>
+</ul>
+</ul></div><h3 style="margin-top:22px">章节速览</h3><div class="chap"><div class="ct"><span class="ctime">00:00</span>AI时代编程语言三要素变化与革命契机</div><div class="cs">本章节主要探讨编程语言的机会，指出编程语言是软件工程的构成部分，软件开发或编程语言有三个要素，即关注软件最终用户需求实现与使用感受、开发者以及执行模型。在AI时代，这三要素都发生变化，如软件可给agent用、agent也能开发软件，大模型提供新运行时能力，编程语言革命正当时。</div></div><div class="chap"><div class="ct"><span class="ctime">01:37</span>AI时代仍需多种编程语言支撑软件开发</div><div class="cs">本章节围绕AI时代是否还需编程语言展开讨论，提出不仅需要编程语言，且可能需多种。从传统软件开发过程看，需要Spec语言，传统编程语言需求仍在；在神经符号融合的新计算范式下，开发智能软件需新语言作载体，即便代码可由agent生成，也仍需语言承载，新旧语言并不矛盾。</div></div><div class="chap"><div class="ct"><span class="ctime">03:20</span>AI编程需求二义性与大模型不确定性问题</div><div class="cs">本章节说话人试图论证两个观点，指出理想的AI编程是告知需求即可生成代码，但实践中存在输入侧需求表达二义性和执行侧大模型不确定性两个根本问题。大模型虽有助于消解二义性，但自然语言的此问题仍存在。还提到形式化语言能剔除二义性，是开发者的朋友，这是本质问题，与AI发展能力无关。</div></div><div class="chap"><div class="ct"><span class="ctime">07:27</span>SBD与Specification语言的谱系及发展趋势</div><div class="cs">本章节主要讨论了SBD及相关语言发展。提到需要Specification描述语言，它可能会涌现且有谱系。自然语言开发软件效果良好，其应用取决于可靠性要求。Specification有谱系，高级语言作为agent生成物代码载体仍存在，若关注点前移，它或成退化的中间语言，开发者体验属性或不再重要，性能和安全尤其是安全仍很重要。</div></div><div class="chap"><div class="ct"><span class="ctime">09:04</span>Rust已获红利，性能安全方面仍有创新空间</div><div class="cs">本章节主要讨论了Rust的发展情况。从观点出发，Rust已吃到红利，此前其应用性面临很大挑战，但有了AI后该问题不再突出。Rust在性能和安全方面有优势，不过从编程语言视角看，它远非终点，朝着安全和性能方向发展，仍有很大的创新空间。</div></div><div class="chap"><div class="ct"><span class="ctime">09:35</span>传统编程语言机会：语言多样、代码开发与翻译</div><div class="cs">本章节指出语言多样性仍会存在，运行态需关注多方面能力，DSL 面向领域的创新也会持续。以华为鸿蒙应用开发为例，说明需特殊的面向领域 UI 开发规范。Spec agent 可指导代码生成、测试、理解、重构及增量开发，还能实现跨语言、跨平台翻译，成为移动端跨平台开发新范式，这也是传统编程语言的机会。</div></div><div class="chap"><div class="ct"><span class="ctime">11:37</span>学术界与工业界编程关注点差异及语言迁移思考</div><div class="cs">本章节说话人1指出学术界做编程语言的多是聪明的数学家，他们专注代数性质、安全保障等，与工业界关注点有很大隔阂。但如果无需开发者直接使用，他们的想法能提升安全性，或可将其更好的想法迁移到编程中，如Rust并非终点。此外，语言设计的基础设施能力从给人用变为给agent用，对代码生成影响较大。</div></div><div class="chap"><div class="ct"><span class="ctime">13:27</span>仓颉新语言语料少问题及语言特性演变方向</div><div class="cs">本章节主要围绕仓颉新语言展开讨论。指出新语言存在语料少的缺点，但随着大模型能力提升和加入知识技能，新语言让大模型学习不再是大问题。还提到仓颉语言在特性演变上，早期有测试、上下文或类型等方面的增强，若空间打开，更多是解决安全性问题，让生成更安全，编译器能查错。</div></div><div class="chap"><div class="ct"><span class="ctime">14:43</span>符号神经融合开发问题及语言控制探讨</div><div class="cs">本章节主要围绕符号神经融合展开，指出需有软件层发挥大模型能力，开发要解决不确定性和协同问题。协同有workflow和agentic等不同范式，存在组合性、兼容性等诸多问题，虽有编译手段解决，但未提及AI agent编辑。还提到一些相关语言，希望更细粒度自由结合传统与大模型，强调入口处编程语言的作用。</div></div></div><div class="note" style="margin:18px 0">以上为飞书妙记 AI 自动生成的纪要与章节摘要，可能存在识别误差，仅供参考。</div><div class="pager"><a href="t22.html">← 需求编译与软件工厂</a><a href="t20.html">Rust AgentOS →</a></div></div><footer><div class="wrap">
+    <div><b>2026 AI 愿景论坛 · 智能体产业研讨会（上海站）</b> · 2026年6月27日 · 9:00–18:00 · 上海西岸美高梅酒店</div>
+    <div class="hosts">主办 Ai Vision Forum <span style="color:var(--muted);font-weight:400">协办</span> GOSIM · CSDN · 奇点智能研究院</div>
+    <div class="disc">本站内容由飞书妙记 AI 自动生成的会议纪要 / 文字记录整理而成，仅供参会者内部回顾与学习参考，可能存在识别误差，请以演讲者原意为准；嘉宾职务与议程以官方会议日程为准。</div>
+    </div></footer></body></html>

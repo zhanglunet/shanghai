@@ -1,0 +1,73 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>蚂蚁 Agentic AI 基建挑战和实践 · AIVF &#x27;26</title><link rel="stylesheet" href="../style.css"></head>
+<body><header class="nav"><div class="wrap">
+    <a class="brand" href="../index.html">AIVF &#x27;26 · <b>智能体产业研讨会</b></a>
+    <nav><a href="../index.html#agenda">日程</a><a href="../index.html#speakers">嘉宾</a><a href="../wiki/index.html">Wiki</a></nav>
+    </div></header><div class="wrap"><div class="crumb"><a href="../index.html">日程</a> › Agentic AI 愿景与软件工厂 › 纪要</div><div class="dhead"><h1>蚂蚁 Agentic AI 基建挑战和实践</h1><div class="who"><a href="../speakers.html#s05" class="nm">余锋（褚霸）</a><br><span style="font-size:13px">蚂蚁集团超级计算部负责人、基础设施技术委员会主席</span></div><div class="dmeta"><span class="chip">主题一 Agentic AI 愿景与软件工厂</span><span class="chip">⏱ 10:00–10:10</span><span class="chip">🎙 12 分钟现场录制</span></div></div><div class="card"><h3>智能纪要 （第 1 段，4 分钟）</h3><div class="summary"><p>李春介绍自身从业经历后，阐述了 Infa 在 AI 时代面临的挑战，包括计算模式转变、基建约束、成本压力和监管压力等内容如下：</p>
+<ul>
+<li><strong>个人背景与视角</strong></li>
+<ul>
+<ul>
+<li><strong>从业经历</strong>：李春在阿里体系的 UF 工作 16 年，从业近 30 年，97 年毕业。目前从 Infa 角度关注整体 AI 的发展。</li>
+<li><strong>角色职责</strong>：身为蚂蚁超算计算人员及基础设施委员会主席，负责规划未来发展方向。</li>
+</ul>
+</ul>
+<li><strong>AI 时代计算模式变化</strong></li>
+<ul>
+<ul>
+<li><strong>支付业务计算特点</strong>：蚂蚁支付业务单笔支付时间短，成本低，算力消耗少，过去采用弹性计算容器将大算力切成小的以降低成本。</li>
+<li><strong>AI 时代计算模式</strong>：AI 时代将小的卡整合为机柜（超级节点），再组成超级集群并放置各种服务，与过去模式相反。</li>
+</ul>
+</ul>
+<li><strong>Infa 面临的挑战</strong></li>
+<ul>
+<ul>
+<li><strong>技术与经验冲突</strong>：过去的经验和做法在新的 AI 时代不成立，Infa 在 AI 发展中相对滞后。</li>
+<li><strong>基建约束</strong>：蚂蚁业务对基建要求稳定，强调金融与可信，数据安全是生命线，支付不可靠会面临监管问题。</li>
+<li><strong>成本压力</strong>：如 10 万张卡成本达 100 亿，支持用户规模的增加会带来巨大成本。</li>
+<li><strong>监管压力</strong>：监管技术手段增强，从大厂挖人，对 Infa 形成较大压力。</li>
+</ul>
+</ul>
+</ul></div><h3 style="margin-top:22px">章节速览</h3><div class="chap"><div class="ct"><span class="ctime">00:06</span>AI时代蚂蚁基建挑战与Infa面临的压力</div><div class="cs">本章节中，李春介绍自己在阿里体系干了16年，从业近30年，将在10分钟内解释背“拖后腿”锅的原因。他指出蚂蚁支付算力成本低，AI时代做法与过去相反。同时提到蚂蚁基建受稳定、金融可信等约束，还要面对亿级用户成本高、监管技术手段强等挑战，如10万张卡成本达100亿。</div></div></div><div class="card"><h3>智能纪要 （第 2 段，8 分钟）</h3><div class="summary"><p>音频主要探讨了使用 AI 后企业面临的诸多问题及应对策略，内容如下：</p>
+<ul>
+<li><strong>使用 AI 面临的问题</strong></li>
+<ul>
+<ul>
+<li><strong>适配成本高</strong></li>
+<ul>
+<ul>
+<li>国产适配复杂：从芯片到集群的完整过程耗时约一年，且国产环境下各环节适配割裂，需多支团队协作，涉及五六百个任务，导致时间和金钱成本大幅增加。</li>
+<li>算力电力制约：AI 的电力消耗是一大制约因素，不解决此问题会影响整体运作。</li>
+</ul>
+</ul>
+<li><strong>架构演进困难</strong></li>
+<ul>
+<ul>
+<li>架构延续性差：蚂蚁有 20 年历史，早期以通用 CPU 为主，后模型独立训练，但推理时 GPU 与 CPU 部署困难，导致通讯次数增多、成本加剧，架构不延续。</li>
+<li>基础设施压力大：GPU 主角的切换给基础设施演进带来巨大压力，如机房迁移需数年时间，期间成本高昂。</li>
+</ul>
+</ul>
+<li><strong>支付链路问题</strong>：支付链路长，各环节易出问题，导致失败率增加，金融回款和补偿困难，如数据库曾花费 7 年解决最后一秒数据丢失问题。</li>
+<li><strong>安全合规成本高</strong></li>
+<ul>
+<ul>
+<li>监管成本增加：金融业务的安全合规是奢侈品，监管成本高，且无法单纯靠金钱解决，需完善后再上线。</li>
+<li>数据隐私限制：因监管要求，隐私数据高度隔离，大规模上线存在风险，需谨慎推进。</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<li><strong>应对策略与工作重点</strong></li>
+<ul>
+<ul>
+<li><strong>成本控制</strong>：将降低成本作为首要任务，因为涉及百亿、千亿级别的资金，成本降不下来工作无法开展。</li>
+<li><strong>安全生产</strong>：借助英保完善安全生产工作，确保监管和 CEO 认可，避免因合规问题遭受重大损失。</li>
+<li><strong>体系构建</strong>：从 CPU 时代以虚拟机或容器为单位构建系统，到 AI 时代以模型为单位，再到 agentic 时代以 agent 体系为单位构建系统和方法论，已进行约两年的 agentic 体系构建工作。</li>
+</ul>
+</ul>
+</ul></div><h3 style="margin-top:22px">章节速览</h3><div class="chap"><div class="ct"><span class="ctime">00:00</span>芯片国产化适配成本高及算力电力消耗问题</div><div class="cs">本章节说话人1提出三个关键问题。一是某问题若不解决事情无法开展；二是蚂蚁相关要国产化，从芯片到集群搭建需一年，过程复杂，涉及多团队协作，适配时间产生大量时间和金钱成本，加大单位token成本；三是AI算力的电力消耗是较大制约因素，不解决会很麻烦。</div></div><div class="chap"><div class="ct"><span class="ctime">01:47</span>蚂蚁架构演进难题及支付链路失败补偿问题</div><div class="cs">本章节主要讨论了蚂蚁架构的可演进问题。蚂蚁有20年历史，早期用通用CPU，后模型训练较独立，但推理时GPU与CPU部署遇难题，导致通讯次数增多、成本加剧、架构不延续。AI发展使GPU角色切换，给基础设施演进带来巨大压力。支付链路长易出问题，金融回款补偿复杂，如数据库需解决数据丢失补偿问题。</div></div><div class="chap"><div class="ct"><span class="ctime">04:06</span>金融业务安全合规成本高制约企业AI效率</div><div class="cs">本章节主要探讨了安全合规问题对企业效率的影响。安全合规在金融业务中成本极高，是一种“奢侈品”，监管成本也非常高，原本预计短时间完成的工作可能耗时很久。使用AI后企业效率并未提高，原因在于英法相关的合规问题绕不过去，这些问题是企业发展的最大约束。</div></div><div class="chap"><div class="ct"><span class="ctime">05:18</span>数据基建受监管，项目需完善细化再上线</div><div class="cs">本章节指出数据基建因监管要求，隐私数据高度隔离，若隐私数据外流可能会失去牌照。强调在英法方面，这不是钱能解决的问题，而是真实存在的难题。提出解决办法是将相关内容做完善、做细致后再上线，而非单纯靠花钱解决。</div></div><div class="chap"><div class="ct"><span class="ctime">05:53</span>服务一级用户大规模上线的挑战与策略</div><div class="cs">本章节主要讨论了服务一级用户时规模巨大的情况。做POC、写代码仅占事情的百分之二三十，剩下70%是大规模上线工作。大家对上线agent缺乏经验，且大规模上线不允许失败或出大问题，否则会面临监管。因此策略应是慢慢上线、灰度推进，同时要保证系统可靠运行，这是很大的负担。</div></div><div class="chap"><div class="ct"><span class="ctime">06:47</span>解决事情优先级：降成本与完善安全生产</div><div class="cs">本章节说话人1提出解决事情的优先级有三个。首要的是降低成本，因涉及百亿、千亿级别的资金，成本降不下来事情无法开展；其次是做好安全生产，需英保帮忙完善相关工作，以避免监管或CEO的问责，否则难以在市场立足。</div></div><div class="chap"><div class="ct"><span class="ctime">07:24</span>不同时代系统构建单位及两年agentic体系成果</div><div class="cs">本章节说话人1指出不同时代构建系统的单位不同，CPU时代以虚拟机或容器为单位，AI时代以模型为单位，agentic时代以agent的体系为单位构建整个体系和方法论。还表示团队做了约两年agentic体系，将其当成中间件按体系构建，最后因时间关系结束发言。</div></div></div><div class="note" style="margin:18px 0">以上为飞书妙记 AI 自动生成的纪要与章节摘要，可能存在识别误差，仅供参考。</div><div class="pager"><a href="t08.html">← AI Dev 方法与实践</a><a href="t12.html">全球智能体产业发展与亚信本土实践 →</a></div></div><footer><div class="wrap">
+    <div><b>2026 AI 愿景论坛 · 智能体产业研讨会（上海站）</b> · 2026年6月27日 · 9:00–18:00 · 上海西岸美高梅酒店</div>
+    <div class="hosts">主办 Ai Vision Forum <span style="color:var(--muted);font-weight:400">协办</span> GOSIM · CSDN · 奇点智能研究院</div>
+    <div class="disc">本站内容由飞书妙记 AI 自动生成的会议纪要 / 文字记录整理而成，仅供参会者内部回顾与学习参考，可能存在识别误差，请以演讲者原意为准；嘉宾职务与议程以官方会议日程为准。</div>
+    </div></footer></body></html>

@@ -1,0 +1,145 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panel：Agent 如何重构软件 — 从 AI 辅助到 AI 原生 · AIVF &#x27;26</title><link rel="stylesheet" href="../style.css"></head>
+<body><header class="nav"><div class="wrap">
+    <a class="brand" href="../index.html">AIVF &#x27;26 · <b>智能体产业研讨会</b></a>
+    <nav><a href="../index.html#agenda">日程</a><a href="../index.html#speakers">嘉宾</a><a href="../wiki/index.html">Wiki</a></nav>
+    </div></header><div class="wrap"><div class="crumb"><a href="../index.html">日程</a> › Agentic AI 愿景与软件工厂 › 纪要</div><div class="dhead"><h1>Panel：Agent 如何重构软件 — 从 AI 辅助到 AI 原生</h1><div class="who"><span class="nm">李建忠</span> 主持 · 刘向阳、潘爱民、金江、王一荔、朱姗</div><div class="dmeta"><span class="chip">主题一 Agentic AI 愿景与软件工厂</span><span class="chip">⏱ 10:20–11:10</span><span class="chip">🎙 47 分钟现场录制</span><span class="chip pan">圆桌 Panel</span></div></div><div class="card"><h3>圆桌嘉宾</h3><p>主持：<a href="../speakers.html#s07">李建忠</a></p><p><a href="../speakers.html#s03">刘向阳</a>、<a href="../speakers.html#s04">潘爱民</a>、<a href="../speakers.html#s08">金江</a>、<a href="../speakers.html#s09">王一荔</a>、<a href="../speakers.html#s10">朱姗</a></p></div><div class="card"><h3>智能纪要 （第 1 段，16 分钟）</h3><div class="summary"><p>音频由 CSDN 起点智能研究院的李建中分享 “Agent 如何重构软件”，介绍了 Agent 时代的驱动力、软件形态和开发方式的变革，以及软件工程核心命题在 Agent 时代的发展方向，内容如下：</p>
+<ul>
+<li><strong>Agent 时代的驱动力与发展维度</strong></li>
+<ul>
+<ul>
+<li><strong>模型缩放定律变化</strong></li>
+<ul>
+<ul>
+<li>阶段演进：从最早的 pre - train 到 post - train 到 test time，目前正从去年下半年进入 agentic scaling 阶段。</li>
+<li>核心变化：Agent 的多步骤、跨系统自主循环执行成为核心，其 scaling 包括协作数量、运行时长和迭代深度三个维度。</li>
+</ul>
+</ul>
+<li><strong>发展趋势</strong></li>
+<ul>
+<ul>
+<li>协作数量：正从个位数、十位数向百位数跃进，未来可能出现千以上级别的 Agent 协作。</li>
+<li>运行时长：从分钟、几十分钟到小时级，逐步向天、周、月级发展，如 Cloud Tag 主打长运行时长。</li>
+<li>迭代深度：目前迭代轮次为个位数到十位数，未来有望上到百位数。</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<li><strong>软件形态的变革</strong></li>
+<ul>
+<ul>
+<li><strong>应用形态转变</strong></li>
+<ul>
+<ul>
+<li>交互界面改变：Agent 将替代传统软件交互，成为用户与系统的第一交互界面。</li>
+<li>传统软件下游化：传统软件将变成被调用的下游工具，软件设计需从为人设计转变为为 Agent 设计。</li>
+<li>UI 方式改变：传统的 CUI、GUI 等方式可能被生成式 UI 替代。</li>
+</ul>
+</ul>
+<li><strong>软件光谱转移</strong></li>
+<ul>
+<ul>
+<li>即时软件：Agent 运行时会即时生成即用即抛的小规模软件。</li>
+<li>柔性软件：处于即时软件和传统软件之间的灰度地带，有稳定底座，上层部分为柔性化技术软件。</li>
+<li>能力绑定时机：传统软件在开发态定义规则，即时软件在运行态产生新规则，柔性软件处于两者之间。</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<li><strong>软件开发方式的变革</strong></li>
+<ul>
+<ul>
+<li><strong>AI 原生开发范式</strong></li>
+<ul>
+<ul>
+<li>白皮书发布：4 月在起点智能大会发布 AI 原生软件研发成熟度模型的白皮书，5 月在巴黎 GOSM 大会发布英文版。</li>
+<li>阶段划分：定义了 L1 到 L5 五个阶段，目前合作企业大体处于 L3 往 L4 演化阶段，部分处于 L2 阶段。</li>
+<li>L3 与 L4 区别：L3 是人机和 Agent 解耦合协同，L4 是 human out of the loop，让 Agent 的 loop 高速迭代。</li>
+</ul>
+</ul>
+<li><strong>五个维度差异</strong>：包括基础设施、知识工程、流程工具、组织人才、治理安全，企业在这些维度上表现参差不齐，不同类型企业在不同级别要求有差别。</li>
+</ul>
+</ul>
+<li><strong>软件工程核心命题及 Agent 时代方向</strong></li>
+<ul>
+<ul>
+<li><strong>核心命题</strong></li>
+<ul>
+<ul>
+<li>复杂性：最小化复杂性是架构师的第一性原理，通过抽象解决，如面向过程、面向对象等。</li>
+<li>动态性：软件具有演化特性，从瀑布模型到敏捷开发，再到 CICD 持续集成，都是为了解决动态性。</li>
+<li>协作性：软件工程是多人多版本的工作，Devops、Scrum 等解决了供应链中各角色的协作关系。</li>
+</ul>
+</ul>
+<li><strong>Agent 时代方向</strong></li>
+<ul>
+<ul>
+<li>复杂性：大模型核心是压缩及抽象，对于大模型推理存在不同观点，有人认为是模式匹配，有人认为是真推理。</li>
+<li>动态性：Loop engineering 等加速迭代，使敏捷开发更快速。</li>
+<li>协作性：Agent 未来组织协作是巨大命题，现阶段动态性可能释放最大信息量，协作更可能是生态级的。</li>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul></div><h3 style="margin-top:22px">章节速览</h3><div class="chap"><div class="ct"><span class="ctime">00:00</span>Agent重构软件驱动力及Scaling变化与潜力</div><div class="cs">本章节由 CSDN 起点智能研究院的李建中分享 agent 如何重构软件。指出当前进入 agentic scaling 阶段，其核心是 agent 多步骤、跨系统自主循环执行。scaling 有三个维度，即协作数量、运行时长和迭代深度，目前各维度都有提升空间，表明 agent 给软件产业带来的上限空间远未见底。</div></div><div class="chap"><div class="ct"><span class="ctime">02:19</span>技术范式变革下Agent对软件形态与开发的影响</div><div class="cs">本章节指出每一代技术范式变革对软件和开发者存在双轮颠覆，即改变软件形态和开发方式。以互联网为例说明变革情况，在 agent 时代，应用形态变为新的智能体应用，开发方式受 agentic coding、ai native 范式影响。agent 会替代传统软件交互，传统软件下游化，软件设计需重构，传统 UI 可能被生成式 UI 替代。</div></div><div class="chap"><div class="ct"><span class="ctime">04:05</span>传统、即时与柔性软件的形态及能力绑定时机</div><div class="cs">本章节主要讨论了软件形态的光谱转移。传统软件稳定，编译后即固定；新型软件会在任务路径中即时生成即用即抛的小规模软件。两者之间的中间地带是柔性软件，由稳定底座和上层柔性化技术软件构成。从技术角度，传统软件在开发态定义规则，即时软件在运行态产生规则，柔性软件处于两者之间，比例会不断变化。</div></div><div class="chap"><div class="ct"><span class="ctime">06:04</span>AI原生软件研发成熟度模型及阶段划分</div><div class="cs">本章节介绍了软件的开发方式从传统命令编程到 AI 原生的演变。4 月在起点智能大会发布 AI 原生软件研发成熟度模型 SM 白皮书，5 月在巴黎 GOSM 大会发布英文版。该模型定义了 L1 到 L5 五个阶段和五个维度，多数合作企业处于 L3 到 L4 演化阶段，L5 较理想，L3 人机解耦合协同，L4 人移出闭环，这是业界主流跃进方向。</div></div><div class="chap"><div class="ct"><span class="ctime">08:06</span>企业服务五维度短板及不同企业要求差异</div><div class="cs">本章节提到企业数字化转型有基础设施、知识工程、流程工具、组织人才、治理安全五个维度，呈现锯齿状，企业有长板和短板，某一短板可能卡住发展，如知识工程是很多企业常遇问题。白皮书第四章谈及不同类型企业对各维度的级别要求有差别，如高可靠软件对验证、流程工具等环节要求极高。</div></div><div class="chap"><div class="ct"><span class="ctime">09:09</span>软件工程核心命题及历史创新方法论解析</div><div class="cs">本章节说话人1分享了对软件工程的思考，认为其有三个核心命题，即复杂性、动态性和协作性。观察软件工程历史，各种创新方法论基本落在这三个轴里，如面向过程等解决复杂性，用抽象方法；瀑布、敏捷、CICD解决动态性；Devops、Scrum、DDD等解决协作性，是一种组织行为。</div></div><div class="chap"><div class="ct"><span class="ctime">11:01</span>大模型时代agent发展三轴及协作生态展望</div><div class="cs">本章节围绕agent时代的方向指引展开，提到三个关键轴：复杂性上，大模型推理存在真假推理分歧，数学领域二者有灰度界限；动态性涉及加速迭代；协作性关乎agent大规模组织协作。现阶段动态性较重要，从信息量释放看协作最关键，其应是生态级协作，非单一公司可控，最后进入圆桌环节。</div></div></div><div class="card"><h3>智能纪要 （第 2 段，30 分钟）</h3><div class="summary"><p>音频围绕 Agent 对软件产业的影响、企业 AI 提效、研发组织形态变化、软件发展趋势以及企业软件服务困境等问题展开深入讨论，内容如下：</p>
+<ul>
+<li><strong>Agent 对软件产业的影响</strong></li>
+<ul>
+<ul>
+<li><strong>软件形态与开发方式影响比较</strong></li>
+<ul>
+<ul>
+<li>软件形态影响更大：有人认为 Agent 带来的软件形态变化对软件产业影响更大，软件将从传统操纵模式向 Agent 操纵模式转变，最终软件形态都是 Agent，包括调用大模型和二进制执行区代码部分。</li>
+<li>开发方式工程化变更影响显著：负责 AI 产品线研发和项目落地的人员认为，目前软件行业工程化的变更更明显，如使用 AI 工具提升了软件的工程化效率，相比软件形态变化，开发方式的改变影响更大。</li>
+</ul>
+</ul>
+<li><strong>应用层 Agent 的重要性</strong>：从市场角度分析，开发层的 Agent 是短期的，应用层的 Agent 才是长期的，苏州的工业总产值增长表明未来 Agent 的应用场景会非常多，开发 Agent 要先进行充分的市场调研，确保有人使用。</li>
+</ul>
+</ul>
+<li><strong>企业 AI 提效问题</strong></li>
+<ul>
+<ul>
+<li><strong>组织提效缓慢的原因</strong></li>
+<ul>
+<ul>
+<li>技术因素：软件开发人员的工作中写代码仅占整体工作量的 15% 左右，大量时间用于沟通需求、设计架构等工作，即使使用 AI 写代码，整体提效也有限，最多到 30%。</li>
+<li>人性因素：人员在工作量未增加时，即使工作效率提高，也不会完全闲置，会找其他工作做，这未必是坏事，可让人员有时间进行探索。</li>
+</ul>
+</ul>
+<li><strong>AI 提效不均衡</strong>：从软件开发全生命周期和项目规模来看，AI 提效不均衡，部分环节效率提升显著，但测试、上线等环节受可靠性、合规性要求影响，提效有限，导致整体项目研发上线最终要做合线。未来随着 Agent 产品需求规模增大，组织会逐渐调整到合理状态。</li>
+</ul>
+</ul>
+<li><strong>研发组织形态变化</strong></li>
+<ul>
+<ul>
+<li><strong>人员结构与职能变化</strong></li>
+<ul>
+<ul>
+<li>外包投入下降：研发组织中今年对外包的投入明显下降。</li>
+<li>职能减少：原来的 PO、PM、VC 等内部职能开始减少。</li>
+<li>前端后端融合：前端开始用 AI 兼顾后端，逐渐走向全栈，迭代开发中人数减少，智能向全栈方向演化，对架构师要求极高。</li>
+</ul>
+</ul>
+<li><strong>组织形态向交付组织转变</strong>：研发组织在有了新能力后，有点像以前的交付组织，大家拥有相同的成熟生产力，开发项目可像流水一样快速生产。</li>
+</ul>
+</ul>
+<li><strong>软件发展趋势</strong></li>
+<ul>
+<ul>
+<li><strong>软件成为大众消费品</strong>：以抖音使视频成为消费品为例，探讨未来软件在 OPC 趋势下有可能成为大众消费品，甚至规模超过短视频。有人认为软件行业开始出现次抛型软件，以客户需求为主导，在垂类行业解决小痛点是未来趋势。</li>
+<li><strong>SaaS 与 AAS 融合</strong>：传统的 SaaS 软件不会被摒弃，将成为组织业务和数据的基座，非核心业务的 SaaS 可能会被边缘化。上层的 Agent as a service 是升维的，未来组织是 SaaS 和 AAS 融合的模式。</li>
+</ul>
+</ul>
+<li><strong>企业软件服务困境</strong></li>
+<ul>
+<ul>
+<li><strong>甲乙矛盾问题</strong>：企业软件服务中存在甲方需求不断变化，导致乙方投入资源增加、交付时间拉长，最终软件价值降低甚至归零，双方双输的问题。</li>
+<li><strong>AI 缓解矛盾</strong>：AI 可使需求快速得到 POC，降低成本，建立信任关系，快速固化真正需求，使项目制在企业软件中变得更合理，同时回收算力投入。</li>
+</ul>
+</ul>
+</ul></div><h3 style="margin-top:22px">章节速览</h3><div class="chap"><div class="ct"><span class="ctime">00:02</span>探讨Agent对软件形态与开发方式影响大小</div><div class="cs">本章节围绕agent对软件带来的双轮变化（软件形态和开发方式）哪个影响更大展开讨论。说话人5认为软件形态改变影响更大，说话人2强调开源模式产业影响，说话人3觉得开发方式工程化变更影响大，说话人6看重应用层，说话人7选agent应用，最后主持人询问现场有无问题。</div></div><div class="chap"><div class="ct"><span class="ctime">07:26</span>AI研发个人与组织提效差异及原因探讨</div><div class="cs">本章节围绕企业AI研发提效中个人提效快但组织提效缓慢的问题展开讨论。说话人5认为有技术和人性两方面原因，技术上写代码仅占部分工作量，人性上人员即使提效也会找事做。说话人2指出AI提效不均衡，且组织调整需匹配，目前存在瓶颈，随着产品需求规模扩大有望合理。</div></div><div class="chap"><div class="ct"><span class="ctime">13:17</span>AI时代研发组织形态及决策分工的变化</div><div class="cs">本章节围绕软件研发中 agent 到来后研发组织形态的变化展开讨论。一方面，AI 编程对人员要求更高，外包投入下降，内部职能减少，前端兼顾后端向全栈演化，迭代开发人数减少，对架构师要求极高；另一方面，从大老板角度看，研发组织更注重业态，有新能力后类似交付组织，可像流水一样按需开发项目。</div></div><div class="chap"><div class="ct"><span class="ctime">15:59</span>软件发展趋势、组织形态与AI提效探讨</div><div class="cs">本章节围绕软件相关话题展开讨论。提出在OPC趋势下软件有无可能成大众消费品的疑问，还探讨了AI提效、软件发展趋势等问题。有人认为应重塑组织架构，做小而美软件；还提到SAAS和AAS会融合，未来组织形态或更扁平，多数人负责消费，少数人工作，呈现福利社会方向。</div></div><div class="chap"><div class="ct"><span class="ctime">25:30</span>AI缓解企业软件甲乙矛盾及定制化合理性</div><div class="cs">本章节围绕AI解决企业软件服务因甲乙矛盾导致的困境展开。国内企业软件现状是甲方需求多变，拉长交付时间，乙方投入大、利润被吃掉，双方双输。而现在AI能快速给出POC，降低成本、提高效率，建立信任，固化需求。未来项目制会更合理，可回收算力投入，解决原有矛盾。</div></div></div><div class="note" style="margin:18px 0">以上为飞书妙记 AI 自动生成的纪要与章节摘要，可能存在识别误差，仅供参考。</div><div class="pager"><a href="t12.html">← 全球智能体产业发展与亚信本土实践</a><a href="t15.html">智能化软件发展的机遇与挑战 →</a></div></div><footer><div class="wrap">
+    <div><b>2026 AI 愿景论坛 · 智能体产业研讨会（上海站）</b> · 2026年6月27日 · 9:00–18:00 · 上海西岸美高梅酒店</div>
+    <div class="hosts">主办 Ai Vision Forum <span style="color:var(--muted);font-weight:400">协办</span> GOSIM · CSDN · 奇点智能研究院</div>
+    <div class="disc">本站内容由飞书妙记 AI 自动生成的会议纪要 / 文字记录整理而成，仅供参会者内部回顾与学习参考，可能存在识别误差，请以演讲者原意为准；嘉宾职务与议程以官方会议日程为准。</div>
+    </div></footer></body></html>

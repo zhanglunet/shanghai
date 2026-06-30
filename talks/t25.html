@@ -1,0 +1,57 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>开源项目实践 ① — Arc：Agentic Requirement Compilation · AIVF &#x27;26</title><link rel="stylesheet" href="../style.css"></head>
+<body><header class="nav"><div class="wrap">
+    <a class="brand" href="../index.html">AIVF &#x27;26 · <b>智能体产业研讨会</b></a>
+    <nav><a href="../index.html#agenda">日程</a><a href="../index.html#speakers">嘉宾</a><a href="../wiki/index.html">Wiki</a></nav>
+    </div></header><div class="wrap"><div class="crumb"><a href="../index.html">日程</a> › Agent 开发实践 › 纪要</div><div class="dhead"><h1>开源项目实践 ① — Arc：Agentic Requirement Compilation</h1><div class="who"><a href="../speakers.html#s19" class="nm">林云老师团队</a><br><span style="font-size:13px">上海交通大学计算机科学与技术系</span></div><div class="dmeta"><span class="chip">主题三 Agent 开发实践</span><span class="chip">⏱ 14:45–14:55</span><span class="chip">🎙 6 分钟现场录制</span></div></div><div class="card"><h3>智能纪要 </h3><div class="summary"><p>音频围绕构建软件功能智能体平台展开，介绍了平台的目标、界面设计、运行流程、追溯关系维护、可视化交互、数据集开源、评估系统等内容，以及后续开源项目的计划，内容如下：</p>
+<ul>
+<li><strong>平台目标与面向对象</strong></li>
+<ul>
+<ul>
+<li><strong>教育场景支持</strong>：搭建 playground 帮助学生理解软件功能智能体，就像学生通过练习来驾驭 20 个智能体，避免直接进入就业市场却无法胜任相关工作。</li>
+<li><strong>科研比赛一体化</strong>：形成科研和比赛的一体化平台，通过 competition 推动相关领域的发展。</li>
+</ul>
+</ul>
+<li><strong>平台界面与运行流程</strong></li>
+<ul>
+<ul>
+<li><strong>界面设计</strong></li>
+<ul>
+<ul>
+<li>任务范围：界面的 task band 包含 web、mobile 以及算子生成等内容，目前刚上线只有 web 和部分 mobile 功能，未来将拓展更多。</li>
+<li>用户选择系统：用户进入后可选择感兴趣的系统，看到复杂的需求文档，该文档目前为 demo，包含四个高层模块和几十个细致的需求场景。</li>
+</ul>
+</ul>
+<li><strong>运行流程</strong></li>
+<ul>
+<ul>
+<li>需求建模：用户可在多模态需求文档中导入需求文档并为自己的需求进行建模，构建需求模型。</li>
+<li>智能体系统上传：将自己的智能体系统上传到平台，平台会展开需求模型，让智能体系统对需求文档进行编码。</li>
+<li>追溯关系维护：平台自动维护需求、模块、测试和底层数据库之间的追踪性关系，形成追溯关系，同时进行运行时分析。</li>
+<li>可视化交互与干预：平台维护所有追溯关系，提供 API 让智能体系统可视化，人可实时监控和干预，通过版本管理日志，可随时回退和调整。</li>
+<li>结果展示：编译完成后，展示格式化的操作系统，让学生和参赛者快速看到构建的软件系统的样子。</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<li><strong>数据集与评估系统</strong></li>
+<ul>
+<ul>
+<li><strong>数据集开源</strong>：希望以开源方式让大家贡献不同难度（简单、中等、难）的题目，仅靠交大的力量是不够的。</li>
+<li><strong>多维度评估系统</strong></li>
+<ul>
+<ul>
+<li>信息记录：记录编译需求量时的 token 消耗、使用的模型（如 Claude、DPC7B 模型）和花费的时间。</li>
+<li>综合评估：形成综合的多维度评估系统，对参赛者进行评估。</li>
+<li>参考文献与方法论公开：为参赛者提供参考文献，若参赛者打榜成绩优异，其方法论将公开，有望形成新的论文。</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<li><strong>后续工作计划</strong>：在 Exceed deadline 过后，正式开源整个项目，并在微信公众号平台上进一步发展。</li>
+</ul></div><h3 style="margin-top:22px">章节速览</h3><div class="chap"><div class="ct"><span class="ctime">00:08</span>构建软件功能智能体及教育竞赛平台设想</div><div class="cs">本章节说话人1表示接到组织任务，争取5分钟阐述想法。基本想法是构建软件功能的智能体，这要求需求文档足够复杂、软件系统足够可靠。希望有个Arena来测试，还提出两方面目标，一是面向教育，有个playground帮助学生理解；二是形成科研和比赛的一体化competition平台。</div></div><div class="chap"><div class="ct"><span class="ctime">01:17</span>网站界面及智能体系统构建与追溯功能介绍</div><div class="cs">本章节介绍了构建网站的界面，涵盖web、mobile等。用户进入后选感兴趣系统，会看到多模态需求文档，可导入、建模。构建需求模型后将智能体系统上传，系统会对需求文档编码，自动维护追溯关系。平台可维护追溯关系，支持人监控干预，日志用版本管理。最后编译结果可视化，提供API让人机交互可控。</div></div><div class="chap"><div class="ct"><span class="ctime">04:38</span>开源数据集、多维度评估及项目公开计划</div><div class="cs">本章节介绍了比赛相关计划。希望以开源方式让大家贡献不同难度题目形成数据集；构建综合多维度评估系统，记录 token 花费、使用模型、用时等；为参赛者提供参考文献，鼓励方法论公开；Exceed 截止日期后正式开源项目，后续会在微信公众号平台进一步发展。</div></div></div><div class="note" style="margin:18px 0">以上为飞书妙记 AI 自动生成的纪要与章节摘要，可能存在识别误差，仅供参考。</div><div class="pager"><a href="t24.html">← 驾驭未来：智能体软件的起源和演进</a><a href="t26.html">开源项目实践 ② — OpenFab →</a></div></div><footer><div class="wrap">
+    <div><b>2026 AI 愿景论坛 · 智能体产业研讨会（上海站）</b> · 2026年6月27日 · 9:00–18:00 · 上海西岸美高梅酒店</div>
+    <div class="hosts">主办 Ai Vision Forum <span style="color:var(--muted);font-weight:400">协办</span> GOSIM · CSDN · 奇点智能研究院</div>
+    <div class="disc">本站内容由飞书妙记 AI 自动生成的会议纪要 / 文字记录整理而成，仅供参会者内部回顾与学习参考，可能存在识别误差，请以演讲者原意为准；嘉宾职务与议程以官方会议日程为准。</div>
+    </div></footer></body></html>

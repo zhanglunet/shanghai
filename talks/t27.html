@@ -1,0 +1,74 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>开源项目实践 ③ — DORA / Octos · AIVF &#x27;26</title><link rel="stylesheet" href="../style.css"></head>
+<body><header class="nav"><div class="wrap">
+    <a class="brand" href="../index.html">AIVF &#x27;26 · <b>智能体产业研讨会</b></a>
+    <nav><a href="../index.html#agenda">日程</a><a href="../index.html#speakers">嘉宾</a><a href="../wiki/index.html">Wiki</a></nav>
+    </div></header><div class="wrap"><div class="crumb"><a href="../index.html">日程</a> › Agent 开发实践 › 纪要</div><div class="dhead"><h1>开源项目实践 ③ — DORA / Octos</h1><div class="who"><a href="../speakers.html#s21" class="nm">何勇</a><br><span style="font-size:13px">DORA / Octos 项目</span></div><div class="dmeta"><span class="chip">主题三 Agent 开发实践</span><span class="chip">⏱ 15:05–15:15</span><span class="chip">🎙 11 分钟现场录制</span></div></div><div class="card"><h3>智能纪要 </h3><div class="summary"><p>音频主要分享了在软件开发项目中运用 AI 的实践经验和成果，阐述了 AI 对项目生产力、质量的提升作用以及未来软件开发的自动化趋势，内容如下：</p>
+<ul>
+<li><strong>开源项目 DataOS 实践</strong></li>
+<ul>
+<ul>
+<li><strong>项目背景</strong></li>
+<ul>
+<ul>
+<li>人员投入：曾在社区寻找顶级开发者，后自行开展项目，在德国和法国招聘两人进行了四年开发，完成目标的 1/3。</li>
+<li>技术尝试：今年年初因 cloud 技术发展，开始尝试利用 AI 进行项目开发。</li>
+</ul>
+</ul>
+<li><strong>验证机制</strong></li>
+<ul>
+<ul>
+<li>基础构建：构建了 TDD（测试驱动开发）和分层的质量保证体系，用于验证 AI 编写代码的正确性。</li>
+<li>模型互验：使用 Claude 和 Code 两个顶级模型互相验证，确保代码质量。</li>
+</ul>
+</ul>
+<li><strong>项目成果</strong>：经过几个月的实践，验证了 AI 开发的可行性和代码质量的可靠性。</li>
+</ul>
+</ul>
+<li><strong>机器人操作系统项目</strong></li>
+<ul>
+<ul>
+<li><strong>项目现状</strong></li>
+<ul>
+<ul>
+<li>技术重构：几年前决定用 Rust 语言重构面向数据流的中间件，架构复杂，是分布式系统，应用层支持多种语言和 AI 模型。</li>
+<li>进度瓶颈：经过四年开发，仅完成 0.5 版本，进展缓慢。</li>
+</ul>
+</ul>
+<li><strong>AI 应用</strong></li>
+<ul>
+<ul>
+<li>准备工作：制作 QA 生成器，利用 Rust 中的形式化验证工具，借助 AI 进行各种审计和预算工作。</li>
+<li>Poc 验证：年初 fork 版本进行 Poc 测试，两个月完成了过去几年的目标任务。</li>
+<li>代码集成：虽工程师拒绝，但强行默认到子仓库，在 AI 帮助下，一周内完成了复杂代码的集成。</li>
+</ul>
+</ul>
+<li><strong>质量保证</strong></li>
+<ul>
+<ul>
+<li>工具运用：采用 red, green（TTD）、PV 等方法，使用 FAST、LIMIT 等工具保证 QA，编写大量 QA 工具。</li>
+<li>模型互查：让两个模型互相检查，Claude 完成后用 Code 查找问题，不断完善代码。</li>
+</ul>
+</ul>
+<li><strong>自动化成效</strong></li>
+<ul>
+<ul>
+<li>半自动化运行：repo 已基本实现半自动化，每天晚上自动配合 subsystem 进行审计、读取和修复简单 issue。</li>
+<li>生产力提升：AI 能解决过去人不愿处理的小 bug，提高了代码质量，现在几乎可以用手机远程控制和查看项目。</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<li><strong>未来趋势</strong></li>
+<ul>
+<ul>
+<li><strong>完全自动化</strong>：认为未来软件开发将完全自动化，几周内即可完成项目。</li>
+<li><strong>角色迁移</strong>：人员角色发生迁移，对人员把控需求和质量保证的能力要求提高，PRD 变得更加重要。</li>
+</ul>
+</ul>
+</ul></div><h3 style="margin-top:22px">章节速览</h3><div class="chap"><div class="ct"><span class="ctime">00:00</span>DataOS项目用AI写代码验证效果良好</div><div class="cs">本章节说话人1用具体例子讲述银行相关情况。提到开源项目DataOS，原本让社区两位顶级开发者做了三四年仅完成目标的1/3，今年年初自己接手。尝试项目时先构建基础，如TDD和分层质量保证，还采用Claude和Code两个顶级模型互相验证，几个月下来验证项目可信且质量好。</div></div><div class="chap"><div class="ct"><span class="ctime">02:14</span>用Rust重构机器人系统及AI助力项目推进</div><div class="cs">本章节主要讲述了一个项目，团队想用 Rust 语言重构面向数据流的中间件以构建机器人操作系统，耗时 4 年才到 0.5 版本且进展缓慢。说话人先做 QA 生成器等准备工作，年初 fork 版本做 Poc，两个月完成几年目标，但工程师拒绝，后强行默认到子仓库，在 AI 帮助下约一周完成复杂操作。</div></div><div class="chap"><div class="ct"><span class="ctime">06:24</span>项目资助、代码流程及QA工具使用情况</div><div class="cs">本章节说话人1主要介绍了两方面内容。一是提及资助相关的red、green、TTD。二是关于PV分成，每个PR有CI且每晚进行，每个release都可放CI，使用FAST、LIMIT等工具保证QA，还编写了很多QA工具。此外，repo的code的任何feature会自动研究cloudMD、agentMD，且每条代码线都要经过规定过程。</div></div><div class="chap"><div class="ct"><span class="ctime">07:23</span>模型互测及解决复杂问题的能力表现</div><div class="cs">本章节主要提到让模型之间互相较量的做法。Claude完成任务后，可利用其继续寻找信息。Vision模型识别链强，能逐段查找对话。还举例说明有复杂的PR问题，人类处理需很长时间，但模型能快速解决问题，强调可不断运用模型来处理事务。</div></div><div class="chap"><div class="ct"><span class="ctime">08:03</span>repo半自动化提升生产力及角色迁移安排</div><div class="cs">本章节主要讲述了当前repo已基本半自动化，每天能自动完成审计、读取和修复简单问题，质量也越来越好，极大提高了生产力。还表示进入第三个L时代，工作将完全自动化，如复杂Spec可一星期自动完成。此外提到角色迁移，秋薇要成为相关模块的owner，需把控好并明确自身需求。</div></div></div><div class="note" style="margin:18px 0">以上为飞书妙记 AI 自动生成的纪要与章节摘要，可能存在识别误差，仅供参考。</div><div class="pager"><a href="t26.html">← 开源项目实践 ② — OpenFab</a><a href="t28.html">开源标准国际化及 AI 开源标准化实 →</a></div></div><footer><div class="wrap">
+    <div><b>2026 AI 愿景论坛 · 智能体产业研讨会（上海站）</b> · 2026年6月27日 · 9:00–18:00 · 上海西岸美高梅酒店</div>
+    <div class="hosts">主办 Ai Vision Forum <span style="color:var(--muted);font-weight:400">协办</span> GOSIM · CSDN · 奇点智能研究院</div>
+    <div class="disc">本站内容由飞书妙记 AI 自动生成的会议纪要 / 文字记录整理而成，仅供参会者内部回顾与学习参考，可能存在识别误差，请以演讲者原意为准；嘉宾职务与议程以官方会议日程为准。</div>
+    </div></footer></body></html>

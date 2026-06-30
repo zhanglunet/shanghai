@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>开源项目实践 ② — OpenFab：下一代软件工厂 · AIVF &#x27;26</title><link rel="stylesheet" href="../style.css"></head>
+<body><header class="nav"><div class="wrap">
+    <a class="brand" href="../index.html">AIVF &#x27;26 · <b>智能体产业研讨会</b></a>
+    <nav><a href="../index.html#agenda">日程</a><a href="../index.html#speakers">嘉宾</a><a href="../wiki/index.html">Wiki</a></nav>
+    </div></header><div class="wrap"><div class="crumb"><a href="../index.html">日程</a> › Agent 开发实践 › 纪要</div><div class="dhead"><h1>开源项目实践 ② — OpenFab：下一代软件工厂</h1><div class="who"><a href="../speakers.html#s20" class="nm">张汉东</a><br><span style="font-size:13px">资深 Rust 专家、技术作家、Octos Agent 核心维护者</span></div><div class="dmeta"><span class="chip">主题三 Agent 开发实践</span><span class="chip">⏱ 14:55–15:05</span><span class="chip">🎙 13 分钟现场录制</span></div></div><div class="card"><h3>智能纪要 </h3><div class="summary"><p>音频聚焦构建可信 AI 软件工程，介绍了传统软件供应链安全规范，分析了 AI 编程带来的新问题，提出实现可控的侧重点和构建信任闭环的方法，内容如下：</p>
+<ul>
+<li><strong>传统软件供应链安全规范</strong></li>
+<ul>
+<ul>
+<li><strong>法律规范与方法论</strong>：传统软件行业有欧盟的 CRA 标准、美国的相关法律条款及方法论，用于解决供应链安全问题，要求软件符合 SPOU 等规范，通过透明日志、密码学等实现合规。</li>
+<li><strong>解决的问题</strong>：主要解决商业依赖攻击、供应链攻击等问题，确保软件出厂可信，无被动手脚情况。</li>
+</ul>
+</ul>
+<li><strong>AI 编程带来的新问题</strong></li>
+<ul>
+<ul>
+<li><strong>安全威胁</strong></li>
+<ul>
+<ul>
+<li>新型攻击手段：AI coding 流行后，出现新安全问题，如 master 有 144 个 NPMO 被偷植入木马偷大模型密钥，Cuda 出现仿冒客户端，还有大模型生成的乳虫病毒，且这类攻击几乎无 CV1 特征，扫描器难发现。</li>
+<li>结构性失明：攻击者可仿造签名合法进入供应链，导致传统扫描器无法识别，出现结构性失明。</li>
+</ul>
+</ul>
+<li><strong>发展趋势</strong>：AI 编程趋势从自动补全到多一层工作，再到软件工厂，工程重心向 AI 自动化软件工厂发展，近半年有上下文工程、阿里斯工程、路路工程等不同定义。</li>
+</ul>
+</ul>
+<li><strong>实现可控的侧重点</strong></li>
+<ul>
+<ul>
+<li><strong>契约</strong>：通过算法驱动编程和沙箱策略，结合可控的软件工程流程，约束大模型行为。</li>
+<li><strong>验证</strong>：将意图编译成规格后，要保证意图可验证，因 AI 编程效率提高，传统供应链体系逐渐失灵，需关注代码编写者责任、契约达标和独立复现问题。</li>
+</ul>
+</ul>
+<li><strong>构建信任闭环</strong></li>
+<ul>
+<ul>
+<li><strong>OpenFAIR 软件工厂</strong>：在 AI 生成代码过程中，将传统软件的验证、签名等加入流程，明确真人审查代码、agent 及使用的 prompt，形成信任闭环。</li>
+<li><strong>人类评审</strong>：软件工厂中至少需两人进行审查，确保代码可追溯，形成完整闭环，最终达到不可跳过人类问责，代码需经人类审查提交。</li>
+</ul>
+</ul>
+</ul></div><h3 style="margin-top:22px">章节速览</h3><div class="chap"><div class="ct"><span class="ctime">00:01</span>构建可信AI软件工程经验交流分享</div><div class="cs">本章节主要围绕构建可信AI软件工程展开。说话人1表示感谢与大家交流行业经验，将议程题目从下一代AI软件工程临时改为构建可信AI软件工程，指出上午讨论多侧重可控层面，自己更侧重可信层面，让软件工厂管住过程并使结果可信，此可信主要针对供应链问题，说话人2还提到麦克风相关话。</div></div><div class="chap"><div class="ct"><span class="ctime">01:30</span>传统软件供应链安全规范及可信证明问题</div><div class="cs">本章节围绕可信产品展开，说话人1以大厂咨询问题为例，指出客户担心二进制软件被动手脚，提出要证明出厂软件可信。介绍了传统软件行业有一套规范来解决供应链安全问题，包括欧盟CRA标准、美国法律条款、方法论等，还涉及组件规范、签名，底层运用透明日志或密码学。</div></div><div class="chap"><div class="ct"><span class="ctime">04:08</span>AI编码流行下的安全问题及发展趋势</div><div class="cs">本章节指出今年上半年出现新的安全问题，如AI coding流行时，NPMO被偷密钥、Cuda有仿冒客户端、针对高购用户的乳虫病毒或由大模型生成，这类问题扫描器难以检测，存在结构性失明。还提到AI扣点从自动补全到多一层工作再到软件工厂的发展趋势，工程重心向此转移，近期有多种相关名词定义，都指向AI自动化软件工厂。</div></div><div class="chap"><div class="ct"><span class="ctime">06:54</span>AI参与软件工程需关注可控、验证与身份认证</div><div class="cs">本章节主要讲述大模型行为可控的三个侧重点，即契约（AI扣点）、算法驱动编程和沙箱策略，以及关键的验证环节。指出AI编程效率提高使传统供应链体系失灵，强调软件工程不仅要控制代码质量，更要保证供应链可信。此外，因AI的agent等成为攻击对象，AI身份认证在信任层面需形成闭环。</div></div><div class="chap"><div class="ct"><span class="ctime">09:35</span>OpenFAIR软件工厂代码生成与人类审查闭环流程</div><div class="cs">本章节介绍了 OpenFAIR 软件工厂的相关流程，在 AI 生成代码时将传统软件的验证、签名等加入流程，形成信任闭环。软件可追溯性上需完整闭环，最终要实现不可跳过人类问责，代码可复现但还需人力评审。过程能自动化固件编译，加入相关界面，最后代码提交必须经过人类审查。</div></div></div><div class="note" style="margin:18px 0">以上为飞书妙记 AI 自动生成的纪要与章节摘要，可能存在识别误差，仅供参考。</div><div class="pager"><a href="t25.html">← 开源项目实践 ① — Arc：Age</a><a href="t27.html">开源项目实践 ③ — DORA /  →</a></div></div><footer><div class="wrap">
+    <div><b>2026 AI 愿景论坛 · 智能体产业研讨会（上海站）</b> · 2026年6月27日 · 9:00–18:00 · 上海西岸美高梅酒店</div>
+    <div class="hosts">主办 Ai Vision Forum <span style="color:var(--muted);font-weight:400">协办</span> GOSIM · CSDN · 奇点智能研究院</div>
+    <div class="disc">本站内容由飞书妙记 AI 自动生成的会议纪要 / 文字记录整理而成，仅供参会者内部回顾与学习参考，可能存在识别误差，请以演讲者原意为准；嘉宾职务与议程以官方会议日程为准。</div>
+    </div></footer></body></html>

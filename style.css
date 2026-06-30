@@ -1,0 +1,79 @@
+
+:root{--bg:#f7f8fa;--card:#fff;--ink:#0f1830;--muted:#64708a;--line:#e6e9f0;
+--brand:#1d4ed8;--brand2:#3b82f6;--brandbg:#eef3ff;--accent:#0ea5a4;--shadow:0 1px 2px rgba(15,24,48,.04),0 8px 24px rgba(15,24,48,.06)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header.nav{position:sticky;top:0;z-index:20;background:rgba(247,248,250,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:18px;height:58px}
+.brand{font-weight:800;letter-spacing:.06em;color:var(--ink)}
+.brand b{color:var(--brand)}
+.nav nav{margin-left:auto;display:flex;gap:20px;font-size:14px}
+.nav nav a{color:var(--muted);font-weight:600}.nav nav a:hover{color:var(--brand);text-decoration:none}
+.hero{background:radial-gradient(1200px 400px at 80% -10%,#dbe6ff 0,transparent 60%),linear-gradient(180deg,#fff,transparent);border-bottom:1px solid var(--line)}
+.hero .wrap{padding:62px 22px 46px}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--brand);background:var(--brandbg);border:1px solid #d6e0ff;padding:6px 12px;border-radius:999px}
+h1.title{font-size:40px;line-height:1.2;margin:18px 0 8px;letter-spacing:-.01em}
+.title small{display:block;font-size:16px;color:var(--muted);font-weight:500;letter-spacing:.02em;margin-top:10px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;color:var(--muted);font-size:14px;margin-top:18px}
+.meta b{color:var(--ink);font-weight:600}
+.tagline{margin-top:14px;font-size:13px;color:var(--accent);font-weight:700;letter-spacing:.2em}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:34px 0 4px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center;box-shadow:var(--shadow)}
+.stat .n{font-size:26px;font-weight:800;color:var(--brand)}
+.stat .l{font-size:12px;color:var(--muted);margin-top:4px}
+section{padding:40px 0}
+.shead{display:flex;align-items:baseline;gap:14px;margin:6px 0 20px}
+.shead .badge{font-size:12px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand2));padding:5px 12px;border-radius:8px;white-space:nowrap}
+.shead h2{font-size:20px;margin:0}
+.shead .cnt{margin-left:auto;color:var(--muted);font-size:13px}
+.talk{display:flex;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:12px;box-shadow:var(--shadow);transition:.16s}
+.talk:hover{border-color:#c7d6ff;transform:translateY(-1px);box-shadow:0 6px 22px rgba(29,78,216,.10)}
+.talk .time{flex:0 0 96px;color:var(--muted);font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;padding-top:2px}
+.talk .body{flex:1;min-width:0}
+.talk .tt{font-size:16px;font-weight:700;margin:0 0 4px}
+.talk .tt a{color:var(--ink)}.talk .tt a:hover{color:var(--brand);text-decoration:none}
+.talk .who{font-size:13.5px;color:var(--muted)}
+.talk .who .nm{color:var(--brand);font-weight:700}
+.talk .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.chip{font-size:11.5px;color:var(--muted);background:#f1f3f8;border:1px solid var(--line);border-radius:999px;padding:2px 9px}
+.chip.pan{color:#7c3aed;background:#f5f0ff;border-color:#e7dcff}
+.chip.go{color:var(--brand);background:var(--brandbg);border-color:#d6e0ff;font-weight:700}
+.break{display:flex;gap:16px;color:var(--muted);font-size:13px;padding:8px 18px;margin-bottom:12px}
+.break .time{flex:0 0 96px;font-weight:600}
+.spkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.spk{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 16px;box-shadow:var(--shadow);transition:.16s}
+.spk:hover{border-color:#c7d6ff;transform:translateY(-1px)}
+.spk .av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;float:left;margin-right:12px}
+.spk .nm{font-weight:800;font-size:15px}.spk .nm a{color:var(--ink)}
+.spk .af{font-size:12.5px;color:var(--muted);margin-top:3px;clear:both;padding-top:6px}
+.spk .cnt{font-size:12px;color:var(--brand);margin-top:8px;font-weight:600}
+/* detail */
+.crumb{font-size:13px;color:var(--muted);margin:24px 0 4px}
+.dhead h1{font-size:28px;margin:6px 0 10px;line-height:1.25}
+.dhead .who{font-size:15px;color:var(--muted);margin-bottom:14px}
+.dhead .who .nm{color:var(--brand);font-weight:700}
+.dmeta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow);margin:18px 0}
+.card h3{font-size:15px;letter-spacing:.04em;color:var(--brand);margin:0 0 12px;text-transform:uppercase}
+.summary p{margin:.5em 0}.summary ul{margin:.3em 0 .3em .2em;padding-left:1.2em}.summary li{margin:.2em 0}
+.summary>ul>li{margin:.3em 0}
+.chap{border-left:2px solid var(--line);padding:2px 0 2px 18px;margin:0 0 4px;position:relative}
+.chap:before{content:"";position:absolute;left:-5px;top:8px;width:8px;height:8px;border-radius:50%;background:var(--brand2)}
+.chap .ct{font-weight:700;font-size:14.5px}
+.chap .ctime{font-size:12px;color:var(--brand);font-variant-numeric:tabular-nums;margin-right:8px}
+.chap .cs{font-size:13.5px;color:#41506b;margin:4px 0 14px}
+.todos li{margin:.3em 0}
+.dl{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px;margin-top:8px}
+.note{font-size:12.5px;color:var(--muted);background:#fffaf0;border:1px solid #f0e3c8;border-radius:10px;padding:10px 14px}
+footer{border-top:1px solid var(--line);background:#fff;margin-top:30px}
+footer .wrap{padding:30px 22px;color:var(--muted);font-size:13px}
+footer .hosts{display:flex;gap:10px 22px;flex-wrap:wrap;margin:10px 0;color:var(--ink);font-weight:600}
+footer .disc{margin-top:12px;font-size:12px;line-height:1.7}
+.pager{display:flex;justify-content:space-between;gap:12px;margin:18px 0 30px;font-size:14px}
+.wikihub{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.wlist a{display:block;padding:7px 0;border-bottom:1px solid var(--line)}
+.wlist a:hover{text-decoration:none;color:var(--brand)}
+.wlist .mm{color:var(--muted);font-size:12px;font-weight:600}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}h1.title{font-size:30px}.wikihub{grid-template-columns:1fr}.talk .time,.break .time{flex-basis:74px}}

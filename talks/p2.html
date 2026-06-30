@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panel：Agent 软件工程的理论基础与工程实践 · AIVF &#x27;26</title><link rel="stylesheet" href="../style.css"></head>
+<body><header class="nav"><div class="wrap">
+    <a class="brand" href="../index.html">AIVF &#x27;26 · <b>智能体产业研讨会</b></a>
+    <nav><a href="../index.html#agenda">日程</a><a href="../index.html#speakers">嘉宾</a><a href="../wiki/index.html">Wiki</a></nav>
+    </div></header><div class="wrap"><div class="crumb"><a href="../index.html">日程</a> › Agentic AI 软件工程方法论与形式化验证 › 纪要</div><div class="dhead"><h1>Panel：Agent 软件工程的理论基础与工程实践</h1><div class="who"><span class="nm">杨子江</span> 主持 · 彭鑫、冯新宇、林云、陈渝、董劲松（Jin Song Dong）、王言治、朱姗</div><div class="dmeta"><span class="chip">主题二 Agentic AI 软件工程方法论与形式化验证</span><span class="chip">⏱ 13:30–14:30</span><span class="chip">🎙 29 分钟现场录制</span><span class="chip pan">圆桌 Panel</span></div></div><div class="card"><h3>圆桌嘉宾</h3><p>主持：<a href="../speakers.html#s16">杨子江</a></p><p><a href="../speakers.html#s11">彭鑫</a>、<a href="../speakers.html#s13">冯新宇</a>、<a href="../speakers.html#s12">林云</a>、<a href="../speakers.html#s14">陈渝</a>、<a href="../speakers.html#s15">董劲松（Jin Song Dong）</a>、<a href="../speakers.html#s17">王言治</a>、<a href="../speakers.html#s10">朱姗</a></p></div><div class="card"><h3>智能纪要 </h3><div class="summary"><p>音频围绕面向 agent 的软件以及形式化验证展开，邀请了复旦大学彭鑫老师、南京大学彭鑫老师、上海交大林云老师等多位专家进行讨论，探讨了形式化验证、软件智能体、编程语言、操作系统、具身智能和软件工厂等多个领域在 AI 时代的发展和面临的问题，内容如下：</p>
+<ul>
+<li><strong>形式化验证在 AI agent 时代的角色与限制</strong></li>
+<ul>
+<ul>
+<li><strong>形式化方法进入主流的机会</strong>：董金松老师认为，形式化方法此前未进入软件工程主流，因其对编写形式化规范和进行形式化验证要求较高。但现在 AI 可生成形式化规范，许多证明过程也能自动化，这为推动形式化方法进入软件工程主流带来机会。</li>
+<li><strong>面临的挑战</strong>：传统挑战依然存在，如形式化规范可能与用户真实意图或需求不符。例如在 format agent 工作中，需求变化时规范也需相应改变，需用 agent 自动化应对复杂性。</li>
+</ul>
+</ul>
+<li><strong>软件智能体解决软件复杂性问题的能力</strong></li>
+<ul>
+<ul>
+<li><strong>两个正交维度</strong>：彭鑫老师提出，软件智能体在解决软件复杂性问题上有一定价值，它能解决人的原能力问题，如工具使用、问题根源查找、记忆管理等，这些能力与特定系统无关。但它无法解决特定项目的复杂系统知识问题，如系统的独特性、历史决策结果、奇怪的相互作用等。</li>
+<li><strong>系统复杂性的度量与应对</strong>：系统复杂性可通过可驾驭性来度量。在系统复杂性间隙中存在机会，如技术支撑的小程序、高保真原型、扁平化软件以及专家拆分复杂系统等情况，AI 可发挥作用。</li>
+<li><strong>可加益性的方面</strong>：可加益性包括问题能讲清且结果明确、能为 agent 提供环境操控能力、充分解耦等方面。微服务架构是解耦的良好方式，它将架构显示化，解决了传统软件架构不清晰的问题。</li>
+</ul>
+</ul>
+<li><strong>智能体时代编程语言的变化</strong></li>
+<ul>
+<ul>
+<li><strong>新形态带来的机会</strong>：冯新宇老师表示，编程语言一直在演进，但外界看来变革性进展不大。符号和神经融合的新形态为编程语言带来机会，计算模型和编程范式可能会有所变化。</li>
+<li><strong>传统语言的演进方向</strong>：传统语言若更多给大模型使用，隐式类型推断等让程序更简洁、易理解的因素可能降低，而可靠性会更受重视，会增加更多规则指导程序优化，Rust 是这方面的代表。</li>
+</ul>
+</ul>
+<li><strong>智能体的操作系统与传统操作系统的区别及可靠性保证</strong></li>
+<ul>
+<ul>
+<li><strong>与传统操作系统的关系</strong>：陈宇老师认为，面向 agent 的操作系统是在已有操作系统基础上的增量，需应对 agent 带来的不确定性、潜在风险和性能等问题。</li>
+<li><strong>可靠性保证的挑战</strong>：保证操作系统安全可靠面临挑战，当前大模型生成代码能力增强，但开发者能力未跟上，需新方法解决问题。</li>
+</ul>
+</ul>
+<li><strong>自动编程和软件工程能力在具身智能赛道的作用</strong></li>
+<ul>
+<ul>
+<li><strong>模型不是最大瓶颈</strong>：王彦志老师指出，在具身智能赛道，模型能力已有所提升，不是最大瓶颈，软硬件配合问题更为严重，如找不到最佳软件和硬件，存在各种不匹配情况。</li>
+<li><strong>自动编程的重要性</strong>：自动编程在具身智能中不可或缺，没有它很多项目无法开展。未来 3 - 5 年，模型和数据能力有望完善，但软硬件配合问题在产业链层面仍难以解决。</li>
+<li><strong>面临的挑战</strong>：具身智能还面临机器人设计和操作带来的危险、AI coding 易导致 hack 等安全和软件工程挑战。</li>
+</ul>
+</ul>
+<li><strong>AI 时代软件工厂的新意义</strong></li>
+<ul>
+<ul>
+<li><strong>从弱到强的转变</strong>：林云老师认为，软件工厂从弱走向强，原因是大模型实现了知识自动化，需要用技能引导出正确答案，在知识空间中进行采样。</li>
+<li><strong>未来发展模式</strong>：未来软件工程希望实现流水线化生产，人从操作转为监控和干预，在箱子掉落等情况时进行处理，更好地进行管理、驾驭和监控。</li>
+</ul>
+</ul>
+<li><strong>后续工作计划</strong></li>
+<ul>
+<ul>
+<li><strong>模型研究与部署</strong>：王彦志老师团队将继续研究大 Coding 模型，如 GLM 的 5.2 等，进行端侧平台或端云结合平台的部署，以及 trainC2Rust 的 27B 级别的模型研究，希望开源后为 agent 软件工程提供助力。</li>
+<li><strong>场景合作与问题解决</strong>：彭鑫老师实验室将继续与智源合作相关场景，运用工程化、系统化方法解决 AI 应用中的问题，如机器人相互配合、异常处理等。</li>
+</ul>
+</ul>
+</ul></div><h3 style="margin-top:22px">章节速览</h3><div class="chap"><div class="ct"><span class="ctime">00:00</span>面向agent软件及形式化验证主题讨论</div><div class="cs">本章节介绍圆桌分享环节，限定时间从一小时缩至半小时，介绍分享嘉宾。点明讨论主题是面向 agent 的软件及形式化验证，因时间有限将按教授专长点名回答问题。先问董金松老师形式化验证在 AI agent 时代的角色及大模型辅助下的限制，董老师分析了现状、机遇与挑战，主持人认可其重要性。</div></div><div class="chap"><div class="ct"><span class="ctime">05:45</span>软件智能体应对复杂性及可加益性探讨</div><div class="cs">本章节围绕软件复杂性及智能体解决问题的能力展开讨论。彭老师认为智能体在价值工程维度有一定作用，但无法解决特定项目的复杂系统知识问题，二者是正交维度。还提及在系统复杂性间隙存在机会，如技术支撑小程序等四种情况。此外，阐述了可加益性的几方面，强调解耦和微服务架构的重要性。</div></div><div class="chap"><div class="ct"><span class="ctime">13:26</span>智能体时代编程语言变化及演进方向探讨</div><div class="cs">本章节主要探讨智能体时代编程语言的变化及重要语言特性。说话人5认为编程语言一直在演进但近年变革性进展不大，主要受业务形态和计算模型影响。符号神经网络新形态是编程语言的机会点，可能使计算模型和编程范式改变。传统语言若面向大模型，隐式特性因素会降低，会更注重可靠性和规则指导程序优化，如Rust。</div></div><div class="chap"><div class="ct"><span class="ctime">16:00</span>智能体与传统操作系统差异及系统可靠性探讨</div><div class="cs">本章节中，说话人1向陈宇老师提出两个问题，一是具身智能的操作系统与传统操作系统在底层有何区别，二是如何保证底层系统的可靠性。陈老师认为面向智能体的操作系统是在已有系统上的增量，要应对智能体带来的问题；对于系统安全可靠，当前存在挑战，主要是大模型能力与开发者能力差异增大，需从新维度解决。</div></div><div class="chap"><div class="ct"><span class="ctime">18:18</span>具身智能赛道中软件工程与自动编程的挑战与价值</div><div class="cs">本章节讨论了自动编程和软件工程能力在具身智能赛道的角色。王老师认为当前具身智能模型能力尚可，主要瓶颈是软硬件配合问题，AI coding 很有必要。未来 3 - 5 年模型和数据能力有望完善，但软件工程仍面临诸多挑战。此外，也提到可用工程化、系统化方法解决机器人场景问题。</div></div><div class="chap"><div class="ct"><span class="ctime">27:15</span>AI时代软件工厂从弱到强的转变与未来</div><div class="cs">本章节主要探讨了AI时代软件工厂的新意义。软件工厂是老概念，由美国学者提出、日本落地，以往是弱软件工厂，如今因大模型能实现知识自动化，可从弱软件工厂向强软件工厂转变。未来软件工程应像流水线生产，人从操作转为监控、管理和驾驭，在出现问题时进行干预。</div></div></div><div class="note" style="margin:18px 0">以上为飞书妙记 AI 自动生成的纪要与章节摘要，可能存在识别误差，仅供参考。</div><div class="pager"><a href="t21.html">← Formal Method by A</a><a href="t24.html">驾驭未来：智能体软件的起源和演进 →</a></div></div><footer><div class="wrap">
+    <div><b>2026 AI 愿景论坛 · 智能体产业研讨会（上海站）</b> · 2026年6月27日 · 9:00–18:00 · 上海西岸美高梅酒店</div>
+    <div class="hosts">主办 Ai Vision Forum <span style="color:var(--muted);font-weight:400">协办</span> GOSIM · CSDN · 奇点智能研究院</div>
+    <div class="disc">本站内容由飞书妙记 AI 自动生成的会议纪要 / 文字记录整理而成，仅供参会者内部回顾与学习参考，可能存在识别误差，请以演讲者原意为准；嘉宾职务与议程以官方会议日程为准。</div>
+    </div></footer></body></html>

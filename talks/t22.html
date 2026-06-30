@@ -1,0 +1,75 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>需求编译与软件工厂 · AIVF &#x27;26</title><link rel="stylesheet" href="../style.css"></head>
+<body><header class="nav"><div class="wrap">
+    <a class="brand" href="../index.html">AIVF &#x27;26 · <b>智能体产业研讨会</b></a>
+    <nav><a href="../index.html#agenda">日程</a><a href="../index.html#speakers">嘉宾</a><a href="../wiki/index.html">Wiki</a></nav>
+    </div></header><div class="wrap"><div class="crumb"><a href="../index.html">日程</a> › Agentic AI 软件工程方法论与形式化验证 › 纪要</div><div class="dhead"><h1>需求编译与软件工厂</h1><div class="who"><a href="../speakers.html#s12" class="nm">林云</a><br><span style="font-size:13px">上海交通大学计算机科学与技术系副教授、系副主任</span></div><div class="dmeta"><span class="chip">主题二 Agentic AI 软件工程方法论与形式化验证</span><span class="chip">⏱ 11:25–11:40</span><span class="chip">🎙 17 分钟现场录制</span></div></div><div class="card"><h3>智能纪要 </h3><div class="summary"><p>音频围绕需求编译、软件工程方法、智能体编程等内容展开，探讨了相关技术的应用、挑战及行业趋势，还介绍了教学实践和未来计划，内容如下：</p>
+<ul>
+<li><strong>需求编译与软件工程发展</strong></li>
+<ul>
+<ul>
+<li><strong>抽象过程与新思路</strong></li>
+<ul>
+<ul>
+<li>不断抽象的历史：从自动化底层的高低电平到高级语言，编程语言和软件工程经历了不断抽象和自然语言化的过程。如今在大语言模型时代，思考能否再次进行抽象，将程序员的自然语言编程，把高级语言转化为新的中间语言。</li>
+<li>需求编译的作用：需求编译是解决自动化二义性和确定性问题的有效思路，可将人的需求更好地转化为代码。</li>
+</ul>
+</ul>
+<li><strong>智能化工程课程实践</strong></li>
+<ul>
+<ul>
+<li>课程内容设置：9 月与斯坦福同时开课，开展智能化工程课程。前两个月教授软件工程基本概念，要求学生复刻 12306 和携程网站；后期讲解需求驱动、MCP 和智能体编程，让学生根据需求文档编译出已实现的项目。</li>
+<li>实践结果：正常无法编程的 GUI 测试通过率为 96%，需求编译成功率基本为 100%，总体较为成功，但也收到一些差评。</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<li><strong>智能体编程面临的挑战</strong></li>
+<ul>
+<ul>
+<li><strong>学生使用问题</strong></li>
+<ul>
+<ul>
+<li>缺乏驾驭能力：学生在未掌握方法论时，面对大模型生成的大量代码，不知如何修改，缺乏驾驭模型的能力。</li>
+<li>调试与阻断困难：需求编译耗时较长，大模型持续编写代码时，学生不知如何调试和阻断，心流体验差。</li>
+</ul>
+</ul>
+<li><strong>技术层面问题</strong></li>
+<ul>
+<ul>
+<li>需求处理难题：当需求文档包含大量场景时，大模型难以处理复杂需求，会出现需求遗漏和自由发挥的情况。</li>
+<li>多模态处理挑战：需求文档是多模态的知识载体，如何将其转化为代码的前端和后端是需要解决的问题。</li>
+<li>代码维护问题：要确保编出的代码可维护、能进行增量修改和持续演化，避免出现“屎山代码”。</li>
+<li>缺陷追溯与管理：面对多个智能体编程，如何追溯缺陷、进行可控管理和保持心流体验是亟待解决的问题。</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<li><strong>解决方案与框架</strong></li>
+<ul>
+<ul>
+<li><strong>二框架设想</strong>：提出 agent requirement compiler 二框架，希望像传统编译器一样提高抽象层次，跨越自然语言需求和可执行形态之间的鸿沟。</li>
+<li><strong>软件开发流程</strong></li>
+<ul>
+<ul>
+<li>需求分解与测试用例生成：让智能体根据复杂需求分解出大框架，为框架内的每个接口生成测试用例，将需求阅读态转化为执行态，使软件开发从基于逻辑开发变为优化问题。</li>
+<li>代码填充与测试：根据细粒度需求生成测试用例，反向填充代码，通过单元测试、集成测试和 GUI 测试，最终完成可交付的软件系统。</li>
+</ul>
+</ul>
+<li><strong>软件维护与追溯</strong>：利用智能体系统可快速维护软件，通过 git 作为特殊日志方式，让人能回溯需求和让智能体重返工，实现历史追溯。</li>
+</ul>
+</ul>
+<li><strong>行业趋势与教学计划</strong></li>
+<ul>
+<ul>
+<li><strong>行业趋势判断</strong>：编码外包行业逐渐衰落，需求工程和测试工程的工作量将显著提升，还提出软件再造工程的概念，如 CUDA 算子向 CAN 算子的自动迁移。</li>
+<li><strong>教学记忆场推出</strong>：推出 Artbench 需求编译和软件工厂的教学记忆场，将代码生产过程可视化，引导大家尝试将复杂文档转化为系统。</li>
+<li><strong>课程回顾与交流邀请</strong>：回顾课程顶住教评压力，邀请多位老师授课，感谢字节跳动赞助，欢迎各界来交大交流。</li>
+</ul>
+</ul>
+</ul></div><h3 style="margin-top:22px">章节速览</h3><div class="chap"><div class="ct"><span class="ctime">00:00</span>需求编译、软件工程方法及编程抽象新思路</div><div class="cs">本章节中，说话人1先介绍董老师网球相关背景，提及会议进展有故事性，工业界与学术界态度不同。指出破立循环能推动事物发展，强调需求编译是解决自动化顽疾的好思路。回顾编程语言从高低电平到高级语言的抽象过程，提出在大语言模型时代再做一次抽象，将程序员需求自然语言化变成新中间语言。</div></div><div class="chap"><div class="ct"><span class="ctime">02:38</span>智能化工程课程成果及AI带来的利弊问题</div><div class="cs">本章节介绍了9月与斯坦福同时开设的智能化工程课程。前两个月教软件工程基本概念，让学生复刻12306和携程网站，后期讲需求驱动等。需求编译结果总体成功，GUI测试通过率96%，需求编译成功率100%。课程有好评也有差评，一是学生无驾驭模型之力，二是编译时间长，不知如何调试阻断，AI带来新挑战和人机交互问题。</div></div><div class="chap"><div class="ct"><span class="ctime">06:02</span>智能体编程面临的挑战及待解决问题</div><div class="cs">本章节主要讨论了智能体编程面临的挑战。一是需求文档场景过多时，大模型难以处理，会出现需求遗漏和自由发挥问题；二是多模态处理难题，需将含文本、图片、视频的知识载体转化为代码；三是软件工程问题，要保证代码可维护、能增量修改和持续演化；四是涉及多个智能体时，要解决缺陷追溯、可控管理和保持交互体验等问题。</div></div><div class="chap"><div class="ct"><span class="ctime">07:08</span>紧缺体系方案与二框架助力软件开发优化</div><div class="cs">本章节介绍了紧缺体系方案的二框架“agent requirement compiler”，希望像编译器一样拔高抽象层次，跨越自然语言需求和可执行形态间的差距。在软件工程流程上，让智能体先分解复杂需求成大框架，为框架接口生成测试用例，实现两个目的：使需求从阅读态变为执行态，让软件开发从基于逻辑开发变为优化问题。</div></div><div class="chap"><div class="ct"><span class="ctime">08:34</span>多模态需求建模及软件开发流程介绍</div><div class="cs">本章节围绕多模态需求建模展开，需求具有二义性，需破解以增强确定性，用 DCL 分解需求。学生写文档本质是需求建模，借助工具引导。给定需求可分解为 UI、API 等模块，搭建框架。通过自顶向下分解需求生成测试用例，再自底向上填充代码，经单元、集成、GUI 测试，完成可交付软件系统。</div></div><div class="chap"><div class="ct"><span class="ctime">11:31</span>智能体系统助力软件维护及迭代追溯成果</div><div class="cs">本章节围绕软件工程中的软件维护展开。指出软件维护代价大，痛点在于需求快速迭代后代码的维护更新。智能体系统可快速维护需求、设计、底层实现和测试等，还能对节点进行操作。将git作为特殊日志方式，便于驾驭复杂迭代过程和追溯历史。文章虽发表且效果优于基线，但表示事情尚未完成。</div></div><div class="chap"><div class="ct"><span class="ctime">13:05</span>编码趋势、人机交互及软件再造工程探讨</div><div class="cs">本章节主要讨论了生成需求时的痛点，如自然语言描述不清导致完备性、断言生成和需求数量不足，需人为干预；还提到软件工厂模式下人机交互界面及监控能力的重要性。趋势判断认为编码行业受影响，需求工程和测试工程工作量将提升。此外，提出软件再造工程概念，并提及 CUDA 算子往 CAN 算子自动迁移的尝试。</div></div><div class="chap"><div class="ct"><span class="ctime">14:46</span>Artbench教学记忆场设想、课程情况及交流邀请</div><div class="cs">本章节说话人1介绍将推出Artbench，即需求编译和软件工厂的教学记忆场。会做demo，把代码生产过程可视化，引导大家尝试将复杂文档转化为系统。认为需求会源码化，需编译并引入约束，人更多做监控。还提及课程顶住教评压力搭建，邀请老师分享，感谢字节赞助，欢迎大家来交大交流。</div></div></div><div class="note" style="margin:18px 0">以上为飞书妙记 AI 自动生成的纪要与章节摘要，可能存在识别误差，仅供参考。</div><div class="pager"><a href="t15.html">← 智能化软件发展的机遇与挑战</a><a href="t19.html">AI 时代的编程语言演进（Rust  →</a></div></div><footer><div class="wrap">
+    <div><b>2026 AI 愿景论坛 · 智能体产业研讨会（上海站）</b> · 2026年6月27日 · 9:00–18:00 · 上海西岸美高梅酒店</div>
+    <div class="hosts">主办 Ai Vision Forum <span style="color:var(--muted);font-weight:400">协办</span> GOSIM · CSDN · 奇点智能研究院</div>
+    <div class="disc">本站内容由飞书妙记 AI 自动生成的会议纪要 / 文字记录整理而成，仅供参会者内部回顾与学习参考，可能存在识别误差，请以演讲者原意为准；嘉宾职务与议程以官方会议日程为准。</div>
+    </div></footer></body></html>
