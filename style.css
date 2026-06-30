@@ -120,6 +120,17 @@ body.lb-open{overflow:hidden}
 .pq-eyebrow{position:relative;font-size:11.5px;font-weight:800;letter-spacing:.16em;color:var(--brand);margin-bottom:8px}
 .pq-text{position:relative;font-size:25px;line-height:1.55;font-weight:800;color:#16223c;letter-spacing:-.01em}
 .pq-text strong{color:var(--brand);background:linear-gradient(180deg,transparent 62%,#dce7ff 62%);padding:0 2px}
+/* 金句墙 quote wall */
+.qwall{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;margin:2px 0 12px}
+.qcard{display:flex;flex-direction:column;justify-content:space-between;gap:18px;min-height:170px;background:linear-gradient(135deg,#eef3ff,#fff 70%);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:.16s}
+.qcard:hover{border-color:#c7d6ff;transform:translateY(-2px);box-shadow:0 10px 30px rgba(29,78,216,.12);text-decoration:none}
+.qcard:before{content:"C";position:absolute;right:16px;top:-4px;font-size:78px;line-height:1;color:#dbe6ff;font-family:Georgia,"Times New Roman",serif;pointer-events:none}
+.qc-q{position:relative;font-size:18.5px;line-height:1.62;font-weight:800;color:#16223c;letter-spacing:-.01em}
+.qc-q strong{color:var(--brand);background:linear-gradient(180deg,transparent 62%,#dce7ff 62%);padding:0 1px}
+.qc-meta{display:flex;flex-direction:column;gap:3px;border-top:1px dashed var(--line);padding-top:12px}
+.qc-who{color:var(--brand);font-weight:700;font-size:14px}
+.qc-title{color:var(--muted);font-size:12.5px;font-variant-numeric:tabular-nums}
+@media(max-width:760px){.qwall{grid-template-columns:1fr}.qc-q{font-size:17px}}
 /* 模型解读 · 要点点评 */
 .mcard{background:linear-gradient(180deg,#f4f0ff,#fff);border:1px solid #e4dcff;border-radius:16px;padding:20px 22px;box-shadow:var(--shadow);margin:18px 0}
 .mcard-hd{display:flex;align-items:baseline;gap:10px 12px;flex-wrap:wrap;margin-bottom:13px}
