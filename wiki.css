@@ -1,0 +1,25 @@
+
+.wbadge{display:inline-block;font-size:11px;font-weight:700;color:#fff;padding:2px 9px;border-radius:999px;vertical-align:middle}
+.wt-person{background:#1d4ed8}.wt-org{background:#0ea5a4}.wt-concept{background:#7c3aed}.wt-event{background:#d97706}
+.wcat{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.wcard h3{display:flex;align-items:center;gap:10px}.wcard h3 .c{font-size:12px;color:var(--muted);font-weight:600;margin-left:auto}
+.elist a{display:flex;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--line)}
+.elist a:hover{text-decoration:none}
+.elist .en{font-weight:700;color:var(--ink)}.elist a:hover .en{color:var(--brand)}
+.elist .er{font-size:12.5px;color:var(--muted);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.elist .ef{font-size:11px;color:var(--muted);font-weight:700;white-space:nowrap}
+.idxgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px}
+.ecard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);transition:.15s}
+.ecard:hover{border-color:#c7d6ff;transform:translateY(-1px)}
+.ecard .top{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.ecard .nm{font-weight:800;font-size:15px}.ecard .nm a{color:var(--ink)}
+.ecard .role{font-size:12.5px;color:var(--muted)}
+.ecard .ds{font-size:13px;color:#41506b;margin-top:7px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.tagrow{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px}
+.echip{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:#f6f8fc;color:#3a4a66}
+.echip a{color:inherit}.echip .s{color:var(--muted);font-size:11px}
+.echip.t-person{border-color:#cfe0ff}.echip.t-org{border-color:#c7efed}.echip.t-concept{border-color:#e6d8ff}.echip.t-event{border-color:#f5e2c0}
+.appear a{display:flex;gap:10px;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--line)}
+.appear .tm{font-size:12px;color:var(--brand);font-variant-numeric:tabular-nums;flex:0 0 92px}
+.subhd{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.08em;margin:6px 0;text-transform:uppercase}
+@media(max-width:760px){.wcat{grid-template-columns:1fr}.idxgrid{grid-template-columns:1fr}.appear .tm{flex-basis:74px}}
