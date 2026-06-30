@@ -109,4 +109,9 @@ body.lb-open{overflow:hidden}
 .lb-prev{left:16px}.lb-next{right:16px}
 .lb-cap{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#cfd8ea;font-size:14px;font-variant-numeric:tabular-nums;letter-spacing:.05em}
 @media(max-width:760px){.lb-nav{width:40px;height:58px;font-size:26px}.lb-prev{left:4px}.lb-next{right:4px}.lb-img{max-width:96vw}}
+.disc-list{list-style:none;margin:0;padding:0;counter-reset:none}
+.disc-list li{padding:15px 0;border-bottom:1px solid var(--line)}
+.disc-list li:last-child{border:0;padding-bottom:0}
+.disc-list b{font-size:15px;color:#16223c}
+.disc-list p{margin:8px 0 0;color:#41506b;font-size:14px;line-height:1.85}
 @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}h1.title{font-size:30px}.wikihub{grid-template-columns:1fr}.talk .time,.break .time{flex-basis:74px}.ig-stats,.ig-pts{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(auto-fill,minmax(104px,1fr))}}
