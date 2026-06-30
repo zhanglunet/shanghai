@@ -48,7 +48,7 @@
 
   function setLab(n,on){ n.g.classList.toggle('lab', !!on || (n.big && on!==false)); }
   // hover highlight ---------------------------------------------------------
-  var searchOn=false;
+  var searchOn=false, selId=null;
   function focus(id){
     if(drag.node) return;
     if(!id){ svg.classList.remove('kg-on');
@@ -78,6 +78,44 @@
     edges.forEach(function(e){ e.el.style.display=(byId[e.s].hidden||byId[e.t].hidden)?'none':''; });
     reheat(0.3);
   }
+  // detail panel (drill-down) -----------------------------------------------
+  var TLBL={person:'人物',org:'机构',concept:'概念',event:'事件'};
+  var panel, pBody;
+  function esc2(s){return (s==null?'':String(s)).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function buildPanel(){
+    panel=document.createElement('div'); panel.className='kg-panel';
+    panel.innerHTML='<button class="kg-px" type="button" aria-label="关闭">&times;</button><div class="kg-pbody"></div>';
+    host.appendChild(panel); pBody=panel.querySelector('.kg-pbody');
+    panel.querySelector('.kg-px').addEventListener('click',closePanel);
+    pBody.addEventListener('click',function(ev){
+      var b=ev.target.closest('[data-go]'); if(b){ ev.preventDefault(); openPanel(b.getAttribute('data-go')); }
+    });
+  }
+  function openPanel(id){
+    var n=byId[id]; if(!n||n.hidden) return;
+    if(!panel) buildPanel();
+    if(selId && byId[selId] && selId!==id){ byId[selId].fx=null; byId[selId].fy=null; }
+    selId=id; n.fx=n.x; n.fy=n.y; focus(id);
+    var sess=(n.sessions||[]).map(function(s){
+      return '<a class="kg-psess" href="talks/'+s[0]+'.html"><span class="kg-pt">'+esc2(s[2])+'</span>'+esc2(s[1])+'</a>';}).join('');
+    var rel=(n.rel||[]).map(function(r){var o=byId[r[0]];
+      return o?'<button class="kg-prchip kg-t-'+o.type+'" type="button" data-go="'+esc2(o.id)+'"><i></i>'+esc2(o.name)+'<b>'+r[1]+'</b></button>':'';}).join('');
+    pBody.innerHTML=
+      '<div class="kg-phead"><div class="kg-ptype"><span class="kg-pdot" style="background:'+n.color+'"></span>'+esc2(TLBL[n.type]||'')+' · 出现于 '+n.f+' 场</div>'+
+      '<h3>'+esc2(n.name)+'</h3></div>'+
+      (n.desc?'<p class="kg-pdesc">'+esc2(n.desc)+'</p>':'')+
+      ((n.sessions&&n.sessions.length)?'<div class="kg-psec">出现于 · '+n.sessions.length+' 场</div><div class="kg-psesslist">'+sess+'</div>':'')+
+      (rel?'<div class="kg-psec">关联实体</div><div class="kg-prel">'+rel+'</div>':'')+
+      '<a class="kg-pmore" href="'+esc2(n.url)+'">查看完整词条 →</a>';
+    panel.scrollTop=0; panel.classList.add('on'); svg.classList.add('kg-haspanel'); reheat(0.2);
+  }
+  function closePanel(){
+    if(!panel||!panel.classList.contains('on')) return;
+    panel.classList.remove('on'); svg.classList.remove('kg-haspanel');
+    if(selId && byId[selId]){ byId[selId].fx=null; byId[selId].fy=null; }
+    selId=null; focus(null); reheat(0.2);
+  }
+
   // drag --------------------------------------------------------------------
   var drag={node:null,moved:false,sx:0,sy:0};
   function bindNode(n,g){
@@ -94,11 +132,15 @@
       var p=toSVG(ev); if(!p) return;
       n.fx=p.x; n.fy=p.y; n.x=p.x; n.y=p.y; reheat(0.35);
     });
-    function end(){ if(drag.node===n){ drag.node=null; n.fx=null; n.fy=null; svg.classList.remove('kg-drag'); reheat(0.25); } }
+    function end(){ if(drag.node===n){ drag.node=null; if(n.id!==selId){ n.fx=null; n.fy=null; } svg.classList.remove('kg-drag'); reheat(0.25); } }
     g.addEventListener('pointerup',end); g.addEventListener('pointercancel',end);
-    g.addEventListener('click',function(ev){ if(drag.moved){ ev.preventDefault(); drag.moved=false; } });
-    g.addEventListener('mouseenter',function(){ if(!searchOn) focus(n.id); });
-    g.addEventListener('mouseleave',function(){ if(!searchOn) focus(null); });
+    g.addEventListener('click',function(ev){
+      if(drag.moved){ ev.preventDefault(); drag.moved=false; return; }
+      if(ev.metaKey||ev.ctrlKey||ev.shiftKey) return;   // allow open wiki in new tab
+      ev.preventDefault(); openPanel(n.id);
+    });
+    g.addEventListener('mouseenter',function(){ if(!searchOn && !selId) focus(n.id); });
+    g.addEventListener('mouseleave',function(){ if(!searchOn && !selId) focus(null); });
   }
   // simulation --------------------------------------------------------------
   function tick(a){
@@ -143,7 +185,9 @@
       off[tp]=!off[tp]; btn.classList.toggle('off',off[tp]); applyVis();
       if(searchOn) runSearch(box?box.value:''); });
   });
+  svg.addEventListener('click',function(ev){ if(ev.target===svg||ev.target===gEdges) closePanel(); });
   svg.addEventListener('dblclick',function(ev){
-    if(ev.target===svg||ev.target===gEdges){ nodes.forEach(function(n){ n.fx=null; n.fy=null; }); reheat(0.6); }
+    if(ev.target===svg||ev.target===gEdges){ closePanel(); nodes.forEach(function(n){ n.fx=null; n.fy=null; }); reheat(0.6); }
   });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closePanel(); });
 })();

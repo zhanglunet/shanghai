@@ -186,4 +186,27 @@ body.lb-open{overflow:hidden}
 .kg-legend{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:11px 2px 2px;font-size:12.5px;color:var(--muted)}
 .kg-tip{color:var(--muted)}
 .kg-more{margin-left:auto;font-weight:700}
-@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}h1.title{font-size:30px}.wikihub{grid-template-columns:1fr}.talk .time,.break .time{flex-basis:74px}.ig-stats,.ig-pts{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(auto-fill,minmax(104px,1fr))}.pq{padding:18px 18px 18px 50px}.pq-text{font-size:19px}.pq:before{font-size:64px;left:10px}.kg-search{width:100%;max-width:none}.kg-search-box{flex:1 1 100%}.kg-filters{margin-left:0;width:100%}.kg-f{flex:1 1 auto;justify-content:center}.kg-legend .kg-tip{display:none}}
+/* 知识星图 · 节点详情侧栏 */
+.kg-panel{position:absolute;top:0;right:0;bottom:0;width:344px;max-width:86%;background:rgba(9,15,38,.93);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);border-left:1px solid #28386b;transform:translateX(101%);transition:transform .24s cubic-bezier(.4,0,.2,1);overflow-y:auto;overscroll-behavior:contain;padding:20px 20px 24px;color:#dbe4ff;z-index:6}
+.kg-panel.on{transform:translateX(0)}
+.kg-px{position:absolute;top:11px;right:13px;width:30px;height:30px;border:0;border-radius:50%;background:rgba(255,255,255,.1);color:#cfd8ea;font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.kg-px:hover{background:rgba(255,255,255,.22);color:#fff}
+.kg-phead{padding-right:36px}
+.kg-ptype{font-size:12px;color:#8aa0d8;font-weight:700}
+.kg-pdot{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:-1px;margin-right:7px}
+.kg-phead h3{font-size:20px;margin:9px 0 0;color:#fff;line-height:1.32}
+.kg-pdesc{font-size:13.5px;line-height:1.78;color:#c2cdf0;margin:14px 0 2px}
+.kg-psec{font-size:11px;font-weight:800;letter-spacing:.1em;color:#7d8fc4;margin:18px 0 9px;border-top:1px solid #1e2b54;padding-top:14px}
+.kg-psesslist{display:flex;flex-direction:column;gap:1px}
+.kg-psess{display:flex;gap:10px;align-items:baseline;padding:7px 9px;border-radius:8px;color:#dbe4ff;font-size:13px;line-height:1.5}
+.kg-psess:hover{background:rgba(255,255,255,.07);text-decoration:none;color:#fff}
+.kg-psess .kg-pt{flex:0 0 74px;color:#7d97ff;font-size:12px;font-variant-numeric:tabular-nums}
+.kg-prel{display:flex;flex-wrap:wrap;gap:7px}
+.kg-prchip{display:inline-flex;align-items:center;gap:6px;border:1px solid #28386b;background:rgba(255,255,255,.04);color:#dbe4ff;border-radius:999px;padding:5px 11px;font:inherit;font-size:12.5px;cursor:pointer;transition:.14s}
+.kg-prchip:hover{border-color:#5a78d8;background:rgba(90,120,216,.2)}
+.kg-prchip i{width:8px;height:8px;border-radius:50%;display:inline-block}
+.kg-prchip.kg-t-person i{background:#6ea0ff}.kg-prchip.kg-t-org i{background:#3fd0c9}.kg-prchip.kg-t-concept i{background:#b18cff}.kg-prchip.kg-t-event i{background:#f0b366}
+.kg-prchip b{color:#8aa0d8;font-weight:700}
+.kg-pmore{display:inline-block;margin-top:18px;color:#9db4ff;font-weight:700;font-size:14px}
+.kg-pmore:hover{color:#fff}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}h1.title{font-size:30px}.wikihub{grid-template-columns:1fr}.talk .time,.break .time{flex-basis:74px}.ig-stats,.ig-pts{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(auto-fill,minmax(104px,1fr))}.pq{padding:18px 18px 18px 50px}.pq-text{font-size:19px}.pq:before{font-size:64px;left:10px}.kg-search{width:100%;max-width:none}.kg-search-box{flex:1 1 100%}.kg-filters{margin-left:0;width:100%}.kg-f{flex:1 1 auto;justify-content:center}.kg-legend .kg-tip{display:none}.kg-panel{top:auto;left:0;right:0;bottom:0;width:auto;max-width:none;height:66%;transform:translateY(101%);border-left:0;border-top:1px solid #28386b;border-radius:16px 16px 0 0}.kg-panel.on{transform:translateY(0)}}
