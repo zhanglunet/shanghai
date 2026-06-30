@@ -114,4 +114,20 @@ body.lb-open{overflow:hidden}
 .disc-list li:last-child{border:0;padding-bottom:0}
 .disc-list b{font-size:15px;color:#16223c}
 .disc-list p{margin:8px 0 0;color:#41506b;font-size:14px;line-height:1.85}
+/* 模型解读 · 要点点评 */
+.mcard{background:linear-gradient(180deg,#f4f0ff,#fff);border:1px solid #e4dcff;border-radius:16px;padding:20px 22px;box-shadow:var(--shadow);margin:18px 0}
+.mcard-hd{display:flex;align-items:baseline;gap:10px 12px;flex-wrap:wrap;margin-bottom:13px}
+.mcard-tag{font-size:13px;font-weight:800;color:#fff;background:linear-gradient(135deg,#7c3aed,#a855f7);padding:5px 12px;border-radius:8px;letter-spacing:.03em;white-space:nowrap}
+.mcard-by{font-size:11.5px;color:var(--muted);line-height:1.5}
+.mcard-read{font-size:14.5px;line-height:1.95;color:#2b2350}
+.mcard-read p{margin:.4em 0}.mcard-read strong{color:#6d28d9}
+.mnotes{margin-top:15px;display:flex;flex-direction:column;gap:10px}
+.mnote{background:#fff;border:1px solid #ece6ff;border-left:3px solid #a855f7;border-radius:10px;padding:11px 15px;transition:.16s}
+.mnote:hover{border-left-color:#7c3aed;box-shadow:0 4px 16px rgba(124,58,237,.08)}
+.mnote-pt{font-size:13.5px;color:#16223c;line-height:1.75}
+.mnote-cm{font-size:13px;color:#41506b;line-height:1.85;margin-top:7px}
+.mnote-k{display:inline-block;font-size:10.5px;font-weight:800;border-radius:5px;padding:1px 7px;margin-right:8px;letter-spacing:.05em;transform:translateY(-1px)}
+.mnote-pt .mnote-k{color:#7c3aed;background:#f0eaff}
+.mnote-cm .mnote-k{color:#fff;background:linear-gradient(135deg,#7c3aed,#a855f7)}
+.mnote-cm strong{color:#6d28d9}
 @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}h1.title{font-size:30px}.wikihub{grid-template-columns:1fr}.talk .time,.break .time{flex-basis:74px}.ig-stats,.ig-pts{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(auto-fill,minmax(104px,1fr))}}
