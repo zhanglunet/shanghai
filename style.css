@@ -90,4 +90,9 @@ footer .disc{margin-top:12px;font-size:12px;line-height:1.7}
 .ig-no{color:var(--brand);font-size:22px;font-weight:800;line-height:1.1;flex:0 0 auto}
 .ig-pn{font-weight:800;font-size:14.5px;color:#16223c}
 .ig-ps{font-size:12.5px;color:var(--muted);margin-top:3px;line-height:1.55}
-@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}h1.title{font-size:30px}.wikihub{grid-template-columns:1fr}.talk .time,.break .time{flex-basis:74px}.ig-stats,.ig-pts{grid-template-columns:1fr}}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px}
+.gallery a{display:block;border-radius:9px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:#eef1f6}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
+.gallery a:hover img{transform:scale(1.05)}
+.gnote{font-size:12px;color:var(--muted);margin-top:11px}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}h1.title{font-size:30px}.wikihub{grid-template-columns:1fr}.talk .time,.break .time{flex-basis:74px}.ig-stats,.ig-pts{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(auto-fill,minmax(104px,1fr))}}
